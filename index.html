@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" media="screen and (max-width: 768px)" href="./css//mobile.css">
+  <link rel="stylesheet" media="screen and (min-width: 1100px)" href="./css/widescreen.css">
+
+  <title>Louis Foged | Web Developer</title>
+</head>
+
+<body id="home">
+  <!-- nav section -->
+  <nav class="nav-bar">
+    <div class="nav-links">
+      <a class="link" href="#home">Home</a>
+      <a class="link" href="#projects">Projects</a>
+      <a class="link" href="#about">About</a>
+      <a class="link" href="#contact">Contact</a>
+    </div>
+  </nav>
+  <!-- hero-section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm Louis <span class="waving-hand">&#x1F44B;</span></h1>
+      <h3>
+        I'm a "fullstack" web developer who enjoys business, solving problems and
+        <span>
+          <a class="in-text-link" href="#projects">building stuff</a>
+        </span>
+      </h3>
+      <button class="btn btn-primary">
+        Get in touch
+        <a href="#contact"></a>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- projects section -->
+    <section id="projects" class="projects">
+      <div class="container">
+
+        <div class="projects_heading">
+          <h2>Projects</h2>
+          <h3>
+            Here are a few examples of things I've built
+          </h3>
+          <h4>
+            Visit my
+            <a class="in-text-link" href="https://github.com/LFoged" target="_blank">Github</a>
+            profile to see more
+          </h4>
+        </div>
+
+        <div class="projects_cards">
+
+          <div class="project_card">
+            <div class="project_img">
+              <img src="" alt="">
+            </div>
+            <div class="project_text">
+              <div class="project_text-description">
+                <p class="project-title">Random quote generator</p>
+              </div>
+              <div class="project_text-links">
+
+                <button class="btn">
+                  See demo
+                  <a class="btn-project-link" href="https://lfoged.github.io/random-ramblings/" target="_blank"></a>
+                </button>
+
+                <button class="btn">
+                  See source code
+                  <a class="btn-project-link" href="https://github.com/LFoged/random-ramblings" target="_blank"></a>
+                </button>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- about & contact section -->
+    <section class="about-contact">
+
+      <section id="about" class="about">
+        <div class="profile">
+          <h2>
+            About me
+            <!-- <img class="profile-pic" src="./img/profile-pic.jpg" alt="profile picture"> -->
+          </h2>
+
+          <h4 class="intro-l">Web & Business developer, based in Copenhagen</h4>
+          <p class="about-me">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni repellendus quam, facilis perspiciatis
+            accusantium doloribus libero soluta debitis optio ut exercitationem nisi iure distinctio culpa, earum eius
+            voluptas temporibus nostrum.
+          </p>
+
+          <div class="linkedIn">
+            <a href="http://"><img src="" alt="">Linkedin Logo</a>
+          </div>
+        </div>
+
+        <div class="tech-stack">
+          <h3>Tools I like to use</h3>
+
+        </div>
+
+        <!-- include link to resume -->
+      </section>
+
+      <section id="contact" class="contact">
+        <h2>Let's chat</h2>
+        <form class="contact-form">
+
+          <input class="test" type="text" placeholder="Your name" required>
+          <input type="email" name="email" id="email" placeholder="Your email" required>
+          <textarea name="message" id="message" placeholder="Enter Message" required></textarea>
+          <button class="btn btn-inverse" type="submit">Send message</button>
+        </form>
+      </section>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>
+        Built by <a href="#home">Louis Foged</a>, fueled with &#x26A1; & &#x2615;
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

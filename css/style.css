@@ -1,0 +1,266 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%; /* 1rem = 10px conversion */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.4;
+  letter-spacing: .09rem;
+}
+
+/* Variables */
+:root {
+  --blue-primary: rgb(4, 0, 221);
+  --blue-secondary: rgb(56, 52, 255);
+  --white-primary: rgb(255, 255, 255);
+  --white-secondary: rgb(240, 240, 240);
+  --grey-primary: rgba(77, 77, 77, 0.938);
+  --black-primary: rgb(20, 20, 20);
+}
+
+/* Elements */
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--blue-primary);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 300;
+}
+
+h1, 
+h2,
+h3 {
+  padding: 2rem 0;
+}
+
+h1 { font-size: 3.75rem; }
+
+h2 { font-size: 3rem; }
+
+h3 { font-size: 1.75rem; }
+
+h4 {
+  font-size: 1.4rem;
+  padding-bottom: 1rem;
+}
+
+p { font-size: 1rem; }
+
+li { list-style: none; }
+
+button {
+  /* position relative, so links inside can be absolute*/
+  position: relative;
+}
+
+button a {
+  /* make links fill entirety of button */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+input,
+textarea {
+  font-size: 1.1rem;
+  padding: .75rem .5rem;
+}
+
+input {
+  
+  outline: none;
+  border: none;
+  margin-bottom: .2rem;
+}
+
+input::placeholder {
+  color: var(--blue-primary);
+}
+
+textarea {
+  font-family: inherit;
+  height: 7rem;
+  resize: vertical;
+  min-height: 7rem;
+  max-height: 150px;
+  outline: none;
+  border: none;
+  margin-bottom: 1.5rem;
+}
+
+textarea::placeholder {
+  color: var(--blue-primary);
+}
+
+/* nav section */
+.nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--white-primary);
+  box-shadow: 0 .075rem .1rem var(--blue-secondary);
+}
+
+.nav-links {
+  display: flex;
+  justify-content:center;
+  padding: .6rem 0;
+}
+
+.link {
+  font-size: 1rem;
+  padding: .6rem 1.2rem;
+  margin: 0 .3rem;
+  transition: .15s ease;
+}
+
+.link:hover {
+  color: var(--white-primary);
+  background: var(--blue-primary);
+  border-radius: .5rem;
+}
+
+/* hero section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 91vh;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 750px;
+}
+
+.in-text-link {
+  transition: .15s ease-in-out;
+}
+
+.in-text-link:hover {
+  padding-bottom: .3rem;
+  border-bottom: .05rem var(--blue-secondary) solid;
+}
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  padding: .8rem 1.6rem;
+  border: .06rem transparent solid;
+  border-radius: .5rem;
+  transition: .15s ease-in-out;
+}
+
+.btn:hover {
+  transform: translateY(-.2rem);
+}
+
+.btn:active {
+  transform: translateY(-.05rem);
+}
+
+.btn-primary {
+  font-size: 1.2rem;
+  color: var(--white-primary);
+  background: var(--blue-primary);
+}
+
+.btn-primary:hover {
+  box-shadow: .3rem .4rem .8rem var(--grey-primary);
+}
+
+.btn-primary:active {
+  color: var(--blue-primary);
+  background: var(--white-primary);
+  border-color: var(--blue-primary);
+  box-shadow: .1rem .2rem .4rem var(--grey-primary);
+}
+
+/* projects section */
+.projects {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 0;
+  background: var(--white-secondary);
+
+  height: 40rem;
+}
+
+/* about & contact section */
+.about-contact {
+  display: flex;
+}
+
+.about {
+  flex: 1.5;
+  padding: 2rem 4rem 2rem 5rem;
+}
+
+.contact {
+  background: var(--blue-primary);
+  color: var(--white-primary);
+  flex: 1;
+  padding: 2rem 5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.btn-inverse {
+  font-size: 1.2rem;
+  color: var(--blue-primary);
+  background: var(--white-primary);
+}
+
+.btn-inverse:hover {
+  transform: translateY(-.2rem);
+  box-shadow: .3rem .4rem .8rem var(--black-primary);
+}
+
+.btn-inverse:active {
+  transform: translateY(-.05rem);
+  box-shadow: .1rem .2rem .4rem var(--black-primary);
+}
+
+/* footer section */
+.footer {
+  background: var(--white-secondary);
+}
+
+.footer .container {
+  text-align: center;
+  padding: .6rem;
+}
+
+.footer .container p {
+  font-size: 1rem;
+}
+
+/* 'Element' classes */
+
+
+
+
+.profile-pic {
+  max-width: 5rem;
+  max-height: 5rem;
+}
