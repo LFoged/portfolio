@@ -36,7 +36,7 @@ a:visited {
 }
 
 h1 {
-  font-size: 3.25rem;
+  font-size: 3rem;
   font-weight: 300;
 }
 
@@ -103,6 +103,11 @@ textarea {
   padding: 0 1.5rem;
 }
 
+.about-header,
+.about-profile {
+  padding-bottom: 1.5rem;
+}
+
 .contact {
   min-width: 43%;
   max-width: 80%;
@@ -110,10 +115,6 @@ textarea {
 
 
 /* Classes */
-.intro-heading {
-  padding-bottom: 1.5rem;
-}
-
 .btn {
   display: inline-block;
   cursor: pointer;
@@ -155,16 +156,16 @@ textarea {
 }
 
 .in-text-link {
-  font-weight: 500;
+  font-weight: 700;
   color: var(--blue-1);
   border-bottom: .1rem transparent solid;
   transition: var(--in-text-link-transition);
 }
 
 .in-text-link:hover {
-  padding-bottom: .6rem;
+  padding-bottom: .5rem;
   border-bottom-color: inherit;
-  border-bottom-width: .3rem;
+  border-bottom-width: .1rem;
 }
 
 .contact-btn,

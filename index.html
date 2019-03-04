@@ -26,20 +26,20 @@
   <!-- home 'page' -->
   <section class="page">
     <div class="about content">
-      <h1 class="intro-heading">
-        Hi, I'm Louis <span class="waving-hand"></span>
-      </h1>
-      <h2>
-        I'm a <strong>web</strong> & <strong>business developer</strong>
-      </h2>
-      <h2 class="intro-heading">
-        I enjoy solving problems and
-        <a class="in-text-link" href="#projects">
-          building stuff
-        </a>
-      </h2>
+      <header class="about-header">
+        <h2>Hi, I'm Louis</h2>
+        <h2>
+          I'm a <strong>business</strong> &
+          <a class="in-text-link" href="#projects">web developer</a>
+        </h2>
+      </header>
+      <div class="about-profile">
+        <p>
+          Cofounder of <a class="in-text-link" href="https://codefounders.co/" target="_blank">Code-Founders</a>
+        </p>
 
-      <a class="btn contact-link" href="#contact">Contact me</a>
+      </div>
+      <a class="btn contact-link" href="#contact">Get in touch</a>
     </div>
   </section>
 
@@ -55,9 +55,10 @@
     <div class="contact content">
       <h1>Get in touch</h1>
       <form class="contact-form">
-        <input class="test" type="text" placeholder="Your name" required>
-        <input type="email" name="email" id="email" placeholder="Your email" required>
-        <textarea name="message" id="message" placeholder="Enter Message" required></textarea>
+        <input class="test" type="text" placeholder="Your name" minlength="5" maxlength="50" required>
+        <input type="email" name="email" id="email" placeholder="Your email" minlength="7" maxlength="50" required>
+        <textarea name="message" id="message" placeholder="Enter Message" minlength="10" maxlength="300" required>
+        </textarea>
         <button class="btn contact-btn" type="submit">Send message</button>
       </form>
     </div>
