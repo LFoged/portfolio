@@ -18,13 +18,13 @@
 
   <!-- nav is removed from flow - position: fixed -->
   <nav class="nav-bar">
-    <a href="#about" class="btn nav-link to-scroll">
+    <a class="btn nav-link to-scroll" href="#about">
       About <img class="icon" src="./img/smiley.png" alt="Smiley">
     </a>
-    <a href="#projects" class="btn nav-link to-scroll">
+    <a class="btn nav-link to-scroll" href="#projects">
       Projects <img class="icon" src="./img/hammer-and-wrench.png" alt="Hammer">
     </a>
-    <a href="#contact" class="btn nav-link to-scroll">
+    <a class="btn nav-link to-scroll" href="#contact">
       Contact <img class="icon" src="./img/waving-hand.png" alt="Waving hand">
     </a>
   </nav>
@@ -32,45 +32,101 @@
   <!-- home 'page' -->
   <header class="page" id="about">
     <div class="about content">
-      <div class="about-header">
+      <div class="heading-primary">
         <h2>Hi, I'm Louis</h2>
         <h2>
           I'm a <strong>business-</strong> & <strong>web developer</strong>
         </h2>
       </div>
       <div class="about-profile">
-        <p>
+        <h3>
           <img class="icon" src="./img/denmark.png" alt="Danish flag"> Live in Copenhagen
-        </p>
-        <p>
+        </h3>
+        <h3>
           <img class="icon" src="./img/briefcase.png" alt="Briefcase"> Available for hire / project work
-        </p>
-        <p>
+        </h3>
+        <h3>
           <img class="icon" src="./img/heart-eyes.png" alt="Heart eyes emoji"> Like people, minimalism & puzzles
-        </p>
-        <p>
+        </h3>
+        <h3>
           <img class="icon" src="./img/party-popper.png" alt="Heart eyes emoji"> Enjoy running, cake &
           <a href="#projects" class="in-text-link to-scroll">building stuff</a>
-        </p>
-        <p>
+        </h3>
+        <h3>
           <img class="icon" src="./img/rocket.png" alt="Rocket">
-          Cofounder of <a class="in-text-link" href="https://codefounders.co" target="_blank" rel="noopener"
-            rel="noreferrer">
-            Code-Founders</a>
-        </p>
+          Cofounder of
+          <a class="in-text-link" href="https://codefounders.co" target="_blank" rel="noopener noreferrer">
+            Code-Founders
+          </a>
+        </h3>
       </div>
-      <a href="#contact" class="btn cta-primary to-scroll">Get in touch</a>
+      <a class="btn cta-primary to-scroll" href="#contact">Get in touch</a>
     </div>
   </header>
 
   <!-- project 'page' -->
   <section class="page" id="projects">
     <div class="projects content">
-      <h2>Here are some things I've built</h2>
-      <p>I use HTML, CSS & JavaScript</p>
-      <div class="card">
+      <h2 class="heading-primary">Here are some things I've built</h2>
+
+      <div class="cards-container">
+
+        <div class="card">
+          <h3 class="heading-secondary"><strong>Random Ramblings</strong></h3>
+          <p class="heading-secondary">Get random quotes from different APIs</p>
+          <p><strong>HTML</strong></p>
+          <p><strong>CSS</strong></p>
+          <p><strong>JAVASCRIPT</strong></p>
+          <div class="card-links">
+            <p>
+              <a class="in-text-link" href="https://lfoged.github.io/random-ramblings/" target="_blank"
+                rel="noopener noreferrer">DEMO</a>
+            </p>
+            <p>
+              <a class="in-text-link" href="https://github.com/LFoged/random-ramblings" target="_blank"
+                rel="noopener noreferrer">CODE</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="heading-secondary"><strong>Wiki-wanna-know</strong></h3>
+          <p class="heading-secondary">Search Wikipedia for articles on any topic</p>
+          <p><strong>HTML</strong></p>
+          <p><strong>CSS</strong></p>
+          <p><strong>JAVASCRIPT</strong></p>
+          <div class="card-links">
+            <p>
+              <a class="in-text-link" href="https://lfoged.github.io/wiki-wanna-know/" target="_blank"
+                rel="noopener noreferrer">DEMO</a>
+            </p>
+            <p>
+              <a class="in-text-link" href="https://github.com/LFoged/wiki-wanna-know" target="_blank"
+                rel="noopener noreferrer">CODE</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="heading-secondary"><strong>Where the Weather</strong></h3>
+          <p class="heading-secondary">Get 4-day local weather forecasts</p>
+          <p><strong>HTML</strong></p>
+          <p><strong>CSS</strong></p>
+          <p><strong>JAVASCRIPT</strong></p>
+          <div class="card-links">
+            <p>
+              <a class="in-text-link" href="https://lfoged.github.io/where-the-weather/" target="_blank"
+                rel="noopener noreferrer">DEMO</a>
+            </p>
+            <p>
+              <a class="in-text-link" href="https://github.com/LFoged/where-the-weather" target="_blank"
+                rel="noopener noreferrer">CODE</a>
+            </p>
+          </div>
+        </div>
 
       </div>
+
     </div>
   </section>
 
@@ -90,10 +146,10 @@
 
   <!-- footer is removed from flow - position: fixed -->
   <footer class="footer">
-    <a class="footer-link" href="https://uk.linkedin.com/in/louisfoged" target="_blank" rel="noopener" rel="noreferrer">
+    <a class="footer-link" href="https://uk.linkedin.com/in/louisfoged" target="_blank" rel="noopener noreferrer">
       <img src="./img/linkedin-icon.png" alt="LinkedIn logo" title="Visit my LinkedIn profile">
     </a>
-    <a class="footer-link" href="https://github.com/LFoged" target="_blank" rel="noopener" rel="noreferrer">
+    <a class="footer-link" href="https://github.com/LFoged" target="_blank" rel="noopener noreferrer">
       <img src="./img/github-icon.png" alt="GitHub logo" title="Visit my GitHub profile">
     </a>
   </footer>

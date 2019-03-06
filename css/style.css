@@ -4,7 +4,7 @@
   --white-1: rgb(255, 255, 255);
   --blue-1: rgb(0, 68, 255);
 
-  --button-transition: .1s ease-in-out;
+  --default-transition: .1s ease-in-out;
   --in-text-link-transition: .18s ease-in-out;
 }
 
@@ -35,18 +35,26 @@ a:visited {
   text-decoration: none;
 }
 
+h1,
+h2 {
+  font-weight: 300;
+}
+
 h1 {
   font-size: 3rem;
-  font-weight: 300;
 }
 
 h2 {
   font-size: 2.2rem;
-  font-weight: 300;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 400; 
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 form {
@@ -107,13 +115,46 @@ textarea {
   text-align: left;
 }
 
-.about-header {
+.heading-primary {
   padding-bottom: 1.5rem;
+}
+
+.heading-secondary {
+  padding-bottom: .65rem;
 }
 
 .about-profile {
   padding-bottom: 2.5rem;
   line-height: 1.6;
+}
+
+.cards-container {
+  min-width: 30rem;
+  max-width: 40rem;
+  display: flex;
+}
+
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem .75rem 1.5rem;
+  border: .05rem var(--black-1) dashed;
+  margin: 0 .3rem;
+  transition: var(--default-transition);
+}
+
+.card:hover {
+  border-style: solid;
+  box-shadow: .2rem .3rem .6rem var(--black-1);
+  transform: scale(1.03);
+}
+
+.card-links {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1rem;
 }
 
 .contact {
@@ -133,7 +174,7 @@ textarea {
   border: .05rem var(--black-1) dashed;
   border-radius: .25rem;
   outline: none;
-  transition: var(--button-transition);
+  transition: var(--default-transition);
 }
 
 .btn:hover {
