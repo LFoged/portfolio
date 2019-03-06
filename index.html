@@ -18,13 +18,13 @@
 
   <!-- nav is removed from flow - position: fixed -->
   <nav class="nav-bar">
-    <a class="btn nav-link" href="#about">
+    <a href="#about" class="btn nav-link to-scroll">
       About <img class="icon" src="./img/smiley.png" alt="Smiley">
     </a>
-    <a class="btn nav-link" href="#projects">
-      Projects <img class="icon" src="./img/hammer-and-wrench.png" alt="Construction icon">
+    <a href="#projects" class="btn nav-link to-scroll">
+      Projects <img class="icon" src="./img/hammer-and-wrench.png" alt="Hammer">
     </a>
-    <a class="btn nav-link" href="#contact">
+    <a href="#contact" class="btn nav-link to-scroll">
       Contact <img class="icon" src="./img/waving-hand.png" alt="Waving hand">
     </a>
   </nav>
@@ -46,25 +46,31 @@
           <img class="icon" src="./img/briefcase.png" alt="Briefcase"> Available for hire / project work
         </p>
         <p>
-          <img class="icon" src="./img/heart-eyes.png" alt="Heart eyes emoji"> Like clean code & minimal design
+          <img class="icon" src="./img/heart-eyes.png" alt="Heart eyes emoji"> Like people, minimalism & puzzles
         </p>
         <p>
           <img class="icon" src="./img/party-popper.png" alt="Heart eyes emoji"> Enjoy running, cake &
-          <a class="in-text-link" href="#projects" target="_blank">building stuff</a>
+          <a href="#projects" class="in-text-link to-scroll">building stuff</a>
         </p>
         <p>
           <img class="icon" src="./img/rocket.png" alt="Rocket">
-          Cofounder of <a class="in-text-link" href="https://codefounders.co" target="_blank">Code-Founders</a>
+          Cofounder of <a class="in-text-link" href="https://codefounders.co" target="_blank" rel="noopener"
+            rel="noreferrer">
+            Code-Founders</a>
         </p>
       </div>
-      <a class="btn contact-link" href="#contact">Get in touch</a>
+      <a href="#contact" class="btn cta-primary to-scroll">Get in touch</a>
     </div>
   </header>
 
   <!-- project 'page' -->
   <section class="page" id="projects">
     <div class="projects content">
+      <h2>Here are some things I've built</h2>
+      <p>I use HTML, CSS & JavaScript</p>
+      <div class="card">
 
+      </div>
     </div>
   </section>
 
@@ -77,21 +83,22 @@
         <input type="email" name="email" id="email" placeholder="Your email" minlength="7" maxlength="50" required>
         <textarea name="message" id="message" placeholder="Your Message" minlength="15" maxlength="500"
           required></textarea>
-        <button class="btn contact-btn" type="submit">Send message</button>
+        <button class="btn cta-primary" type="submit">Send message</button>
       </form>
     </div>
   </section>
 
   <!-- footer is removed from flow - position: fixed -->
   <footer class="footer">
-    <a class="footer-link" href="https://uk.linkedin.com/in/louisfoged" target="blank">
+    <a class="footer-link" href="https://uk.linkedin.com/in/louisfoged" target="_blank" rel="noopener" rel="noreferrer">
       <img src="./img/linkedin-icon.png" alt="LinkedIn logo" title="Visit my LinkedIn profile">
     </a>
-    <a class="footer-link" href="https://github.com/LFoged" target="blank">
+    <a class="footer-link" href="https://github.com/LFoged" target="_blank" rel="noopener" rel="noreferrer">
       <img src="./img/github-icon.png" alt="GitHub logo" title="Visit my GitHub profile">
     </a>
   </footer>
 
 </body>
+<script src="./js/app.js" async></script>
 
 </html>
