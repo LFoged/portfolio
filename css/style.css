@@ -50,7 +50,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
 h3 {
@@ -87,7 +87,7 @@ textarea {
 }
 
 
-/* Sections */
+/* Section classes */
 .nav-bar,
 .footer {
   position: fixed;
@@ -118,14 +118,6 @@ textarea {
 
 .about {
   text-align: left;
-}
-
-.heading-primary {
-  padding-bottom: 1.5rem;
-}
-
-.heading-secondary {
-  padding-bottom: .65rem;
 }
 
 .about-profile {
@@ -168,7 +160,15 @@ textarea {
 }
 
 
-/* Classes */
+/* Element classes */
+.heading-primary {
+  padding-bottom: 1.5rem;
+}
+
+.heading-secondary {
+  padding-bottom: .5rem;
+}
+
 .btn {
   display: inline-block;
   cursor: pointer;
@@ -251,6 +251,16 @@ textarea {
   background: var(--blue-1);
   border-color: var(--blue-1);
 }
+
+.card h3 {
+  font-weight: 500;
+}
+
+.tools {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
 
 .footer-link img {
   max-width: 1.8rem;
