@@ -19,13 +19,18 @@
   font-size: inherit;
 }
 
+html {
+  /* fallback for smooth scroll on supported browsers w/out JS */
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 62.5%; /* 1rem = 10px conversion */
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--black-1);
   line-height: 1.4;
   letter-spacing: .09rem;
-  overflow: hidden; /* no scroll bar (1 section = 1 page effect) */
+  overflow: hidden; /* no scroll bar (effect: 1 section = 1 'page') */
 }
 
 /* Elements */
