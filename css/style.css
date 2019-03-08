@@ -40,20 +40,12 @@ a:visited {
   text-decoration: none;
 }
 
-h1,
-h2 {
+h1 {
+  font-size: 2rem;
   font-weight: 300;
 }
 
-h1 {
-  font-size: 3rem;
-}
-
 h2 {
-  font-size: 2rem;
-}
-
-h3 {
   font-size: 1.2rem;
   font-weight: 400; 
 }
@@ -260,7 +252,6 @@ textarea {
   font-size: 1.5rem;
   font-weight: 400;
 }
-
 
 .footer-link img {
   max-width: 1.8rem;
