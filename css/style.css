@@ -182,7 +182,7 @@ textarea {
   opacity: 0;
   visibility: hidden;
   position: fixed;
-  top: -1vh;
+  top: -4vh;
   left: 0;
   height: 100vh;
   width: 100vw;
@@ -190,7 +190,7 @@ textarea {
   justify-content: center;
   align-items: center;
   background-color: var(--black-2);
-  transition: var(--transition-slow);
+  transition: var(--transition-fast);
 }
 
 .modal-content-container {
@@ -235,10 +235,10 @@ textarea {
 .footer-link {
   color: var(--black-1);
   font-weight: 700;
-  background: var(--white-1);
 }
 
 .nav-link {
+  background: var(--white-1);
   border: .05rem var(--black-1) dashed;
   margin: 0 .2rem;
 }
