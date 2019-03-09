@@ -182,7 +182,7 @@ textarea {
   opacity: 0;
   visibility: hidden;
   position: fixed;
-  top: -4vh;
+  top: -1vh;
   left: 0;
   height: 100vh;
   width: 100vw;
@@ -190,7 +190,6 @@ textarea {
   justify-content: center;
   align-items: center;
   background-color: var(--black-2);
-  transition: var(--transition-fast);
 }
 
 .modal-content-container {
