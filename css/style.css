@@ -1,9 +1,10 @@
 /* Variables */
 :root {
   --black-1: rgb(41, 41, 41);
-  --black-2: rgba(0, 0, 0, 0.89);
+  --black-2: rgba(0, 0, 0, 0.932);
   --white-1: rgb(255, 255, 255);
   --blue-1: rgb(0, 68, 255);
+  --blue-2: rgb(36, 94, 255);
 
   --transition-fast: .1s ease-in-out;
   --transition-slow: .3s ease-in-out;
@@ -173,6 +174,7 @@ textarea {
 .modal-state:checked + .modal {
   opacity: 1;
   visibility: visible;
+  top: 0;
 }
 
 .modal {
@@ -180,7 +182,7 @@ textarea {
   opacity: 0;
   visibility: hidden;
   position: fixed;
-  top: 0;
+  top: -1vh;
   left: 0;
   height: 100vh;
   width: 100vw;
@@ -216,60 +218,45 @@ textarea {
   padding-bottom: .5rem;
 }
 
+
+/* Buttons & links */
 .btn {
   display: inline-block;
   cursor: pointer;
   font-size: 1.1rem;
   font-weight: 600;
   padding: .7rem 1.3rem;
-  background: var(--white-1);
-  border: .05rem var(--black-1) dashed;
   border-radius: .25rem;
   outline: none;
   transition: var(--transition-fast);
-}
-
-.btn:hover {
-  border-style: solid;
-  box-shadow: .2rem .3rem .6rem var(--black-1);
-  transform: translateY(-.2rem);
-}
-
-.btn:active {
-  border-style: solid;
-  box-shadow: .1rem .2rem .3rem var(--black-1);
-  transform: translateY(-.05rem);
 }
 
 .nav-link,
 .footer-link {
   color: var(--black-1);
   font-weight: 700;
+  background: var(--white-1);
 }
 
 .nav-link {
+  border: .05rem var(--black-1) dashed;
   margin: 0 .2rem;
+}
+
+.nav-link:hover {
+  border-style: solid;
+  box-shadow: .2rem .3rem .6rem var(--black-1);
+  transform: translateY(-.2rem);
+}
+
+.nav-link:active {
+  border-style: solid;
+  box-shadow: .1rem .2rem .3rem var(--black-1);
+  transform: translateY(-.05rem);
 }
 
 .footer-link {
   margin: 0 .5rem;
-}
-
-.icon {
-  vertical-align: middle;
-  max-width: 1.3rem;
-  max-height: 1.3rem;
-}
-
-.current,
-.current:hover,
-.current:active {
-  color: var(--white-1);
-  background: var(--black-1);
-  border-style: solid;
-  box-shadow: none;
-  cursor: not-allowed; 
-  transform: none;
 }
 
 .in-text-link {
@@ -286,18 +273,31 @@ textarea {
 
 .cta-primary {
   font-weight: 500;
-  color: var(--blue-1);
-  background: transparent;
-  border-color: inherit;
-  border-style: solid;
-}
-
-.btn-contact,
-.cta-primary:hover,
-.cta-primary:active {
   color: var(--white-1);
   background: var(--blue-1);
-  border-color: var(--blue-1);
+  border: none;
+}
+
+.cta-primary:hover,
+.cta-primary:active {
+  background-color: var(--blue-2);
+}
+
+.current,
+.current:hover,
+.current:active {
+  color: var(--white-1);
+  background: var(--black-1);
+  border-style: solid;
+  box-shadow: none;
+  cursor: not-allowed; 
+  transform: none;
+}
+
+.icon {
+  vertical-align: middle;
+  max-width: 1.3rem;
+  max-height: 1.3rem;
 }
 
 .card h3 {
