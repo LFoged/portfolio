@@ -18,32 +18,35 @@
 
   <!-- nav is removed from flow - position: fixed -->
   <nav class="nav-bar">
-    <a class="btn nav-link to-scroll" href="#about">
-      About <img class="icon" src="./img/smiley.png" alt="Smiley">
+    <a class="btn nav-link to-scroll" href="#home">
+      Home <img class="icon" src="./img/house.png" alt="Smiley">
     </a>
     <a class="btn nav-link to-scroll" href="#projects">
       Projects <img class="icon" src="./img/hammer-and-wrench.png" alt="Hammer">
     </a>
-    <a class="btn nav-link to-scroll" href="#contact">
-      Contact <img class="icon" src="./img/waving-hand.png" alt="Waving hand">
+    <a class="btn nav-link to-scroll" href="#about">
+      About <img class="icon" src="./img/smiley.png" alt="Smiley">
     </a>
+
+    <!-- label & checkbox modal "hack" to avoid redirecting user to '#' -->
+    <label class="btn btn-contact" for="modal-state">Contact</label>
   </nav>
 
   <!-- home 'page' -->
-  <header class="page" id="about">
-    <div class="about content">
+  <header class="page" id="home">
+    <div class="home content">
       <div class="heading-primary">
         <h1>Hi, I'm Louis</h1>
         <h1>
           I'm a <strong>business-</strong> & <strong>web developer</strong>
         </h1>
       </div>
-      <div class="about-profile">
+      <div class="home-intro">
         <h2>
-          <img class="icon" src="./img/denmark.png" alt="Danish flag"> Live in Copenhagen
+          <img class="icon" src="./img/briefcase.png" alt="Briefcase"> Available for hire
         </h2>
         <h2>
-          <img class="icon" src="./img/briefcase.png" alt="Briefcase"> Available for hire / project work
+          <img class="icon" src="./img/denmark.png" alt="Danish flag"> Live in Copenhagen
         </h2>
         <h2>
           <img class="icon" src="./img/heart-eyes.png" alt="Heart eyes emoji"> Like people, minimalism & puzzles
@@ -52,100 +55,128 @@
           <img class="icon" src="./img/party-popper.png" alt="Heart eyes emoji"> Enjoy running, cake &
           <a href="#projects" class="in-text-link to-scroll">building stuff</a>
         </h2>
+      </div>
+
+      <div class="home-cta">
+        <label class="btn cta-primary" for="modal-state">Get in touch</label>
         <h2>
-          <img class="icon" src="./img/rocket.png" alt="Rocket">
-          Cofounder of
-          <a class="in-text-link" href="https://codefounders.co" target="_blank" rel="noopener noreferrer">
-            Code-Founders
-          </a>
+          or <a class="in-text-link" href="#about">read "about me"</a>
         </h2>
       </div>
-      <a class="btn cta-primary to-scroll" href="#contact">Get in touch</a>
     </div>
   </header>
 
   <!-- project 'page' -->
   <section class="page" id="projects">
     <div class="projects content">
+      <h1>
+        Frontend: <span class="tools">HTML, CSS & JavaScript</span>
+      </h1>
+      <h1>
+        Fullstack:
+        <span class="tools">Vue, Node (Express / Hapi), MongoDB</span>
+      </h1>
 
-      <section class="frontend">
-        <h1 class="heading-secondary">
-          Frontend: <span class="tools">HTML, CSS & JavaScript</span>
-        </h1>
-        <div class="cards-container">
-          <div class="card">
-            <h2 class="heading-secondary">Random Quotes</h2>
-            <p>Get random quotes from different APIs</p>
-            <div class="card-links">
-              <p>
-                <a class="in-text-link" href="https://lfoged.github.io/random-ramblings/" target="_blank"
-                  rel="noopener noreferrer">DEMO</a>
-              </p>
-              <p>
-                <a class="in-text-link" href="https://github.com/LFoged/random-ramblings" target="_blank"
-                  rel="noopener noreferrer">CODE</a>
-              </p>
-            </div>
-          </div>
+      <br>
+      <br>
+      <br>
 
-          <div class="card">
-            <h2 class="heading-secondary">Wiki Search</h2>
-            <p>Search Wikipedia for articles on any topic</p>
-            <div class="card-links">
-              <p>
-                <a class="in-text-link" href="https://lfoged.github.io/wiki-wanna-know/" target="_blank"
-                  rel="noopener noreferrer">DEMO</a>
-              </p>
-              <p>
-                <a class="in-text-link" href="https://github.com/LFoged/wiki-wanna-know" target="_blank"
-                  rel="noopener noreferrer">CODE</a>
-              </p>
-            </div>
-          </div>
 
-          <div class="card">
-            <h2 class="heading-secondary">Local Weather</h2>
-            <p>Get 4-day local weather forecasts</p>
-            <div class="card-links">
-              <p>
-                <a class="in-text-link" href="https://lfoged.github.io/where-the-weather/" target="_blank"
-                  rel="noopener noreferrer">DEMO</a>
-              </p>
-              <p>
-                <a class="in-text-link" href="https://github.com/LFoged/where-the-weather" target="_blank"
-                  rel="noopener noreferrer">CODE</a>
-              </p>
-            </div>
+
+
+
+      <div class="cards-container">
+        <div class="card">
+          <h2 class="heading-secondary"><strong>FRONTEND</strong></h2>
+
+          <h2 class="heading-secondary">Random Quotes</h2>
+          <p>Get random quotes from different APIs</p>
+          <div class="card-links">
+            <p>
+              <a class="in-text-link" href="https://lfoged.github.io/random-ramblings/" target="_blank"
+                rel="noopener noreferrer">DEMO</a>
+            </p>
+            <p>
+              <a class="in-text-link" href="https://github.com/LFoged/random-ramblings" target="_blank"
+                rel="noopener noreferrer">CODE</a>
+            </p>
           </div>
         </div>
-      </section>
 
-      <br>
-      <br>
-      <br>
-      <section class="fullstack">
-        <h1 class="heading-secondary">
-          Fullstack - will be added soon:
-          <span class="tools">Vue, Node (Express / Hapi), MongoDB</span>
+        <div class="card">
+          <h2 class="heading-secondary">Wiki Search</h2>
+          <p>Search Wikipedia for articles on any topic</p>
+          <div class="card-links">
+            <p>
+              <a class="in-text-link" href="https://lfoged.github.io/wiki-wanna-know/" target="_blank"
+                rel="noopener noreferrer">DEMO</a>
+            </p>
+            <p>
+              <a class="in-text-link" href="https://github.com/LFoged/wiki-wanna-know" target="_blank"
+                rel="noopener noreferrer">CODE</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="heading-secondary">Local Weather</h2>
+          <p>Get 4-day local weather forecasts</p>
+          <div class="card-links">
+            <p>
+              <a class="in-text-link" href="https://lfoged.github.io/where-the-weather/" target="_blank"
+                rel="noopener noreferrer">DEMO</a>
+            </p>
+            <p>
+              <a class="in-text-link" href="https://github.com/LFoged/where-the-weather" target="_blank"
+                rel="noopener noreferrer">CODE</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- about 'page' -->
+  <header class="page" id="about">
+    <div class="about content">
+      <div class="heading-primary">
+        <h1>Hi, I'm Louis</h1>
+        <h1>
+          I'm a <strong>business-</strong> & <strong>web developer</strong>
         </h1>
-      </section>
+      </div>
 
-    </div>
-  </section>
+      <h2>
+        <img class="icon" src="./img/rocket.png" alt="Rocket">
+        Cofounder of
+        <a class="in-text-link" href="https://codefounders.co" target="_blank" rel="noopener noreferrer">
+          Code-Founders
+        </a>
+      </h2>
 
-  <!-- contact 'page' -->
-  <section class="page" id="contact">
-    <div class="contact content">
-      <h1>Get in touch</h1>
-      <form class="contact-form" name="contact" method="POST" netlify>
-        <input type="text" name="name" id="name" placeholder="Your name" minlength="5" maxlength="50" required>
-        <input type="email" name="email" id="email" placeholder="Your email" minlength="7" maxlength="50" required>
-        <textarea name="message" id="message" placeholder="Your Message" minlength="15" maxlength="500"
-          required></textarea>
-        <button class="btn cta-primary" type="submit">Send message</button>
-      </form>
+      <br>
+
+      <a class="btn cta-primary to-scroll" href="#contact">Get in touch</a>
     </div>
-  </section>
+  </header>
+
+  <!-- modal & contact form - checkbox 'hack' to manage modal state -->
+  <input type="checkbox" class="modal-state" id="modal-state">
+  <div class="modal" id="modal">
+    <label class="modal__bg" for="modal-state"></label>
+    <div class="modal-content-container">
+      <div class="contact content">
+        <h1>Get in touch</h1>
+        <form class="contact-form" name="contact" method="POST" netlify>
+          <input type="text" name="name" id="name" placeholder="Your name" minlength="5" maxlength="50" required>
+          <input type="email" name="email" id="email" placeholder="Your email" minlength="7" maxlength="50" required>
+          <textarea name="message" id="message" placeholder="Your Message" minlength="15" maxlength="300"
+            required></textarea>
+          <button class="btn cta-primary" type="submit">Send message</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <!-- footer is removed from flow - position: fixed -->
   <footer class="footer">
@@ -158,6 +189,6 @@
   </footer>
 
 </body>
-<script src="./js/app.js" async></script>
+<!-- <script src="./js/app.js" async></script> -->
 
 </html>
