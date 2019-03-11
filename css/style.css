@@ -3,12 +3,12 @@
   --black-1: rgb(41, 41, 41);
   --black-2: rgba(0, 0, 0, 0.932);
   --white-1: rgb(255, 255, 255);
-  --white-2: rgb(230, 230, 230);
-  --blue-1: rgb(1, 51, 187);
+  --white-2: rgb(240, 240, 240);
+  --blue-1: rgb(0, 50, 187);
   --blue-2: rgb(31, 91, 255);
 
   --transition-fast: .1s ease-in-out;
-  --transition-slow: .3s ease-in-out;
+  --transition-slow: .3s ease;
   --in-text-link-transition: .18s ease-in-out;
 }
 
@@ -95,11 +95,11 @@ textarea {
 }
 
 .nav-bar {
-  top: 3%;
+  top: 4%;
 }
 
 .nav-bar label {
-  margin-left: 1.2rem;
+  margin-left: 1.5rem;
 }
 
 .footer {
@@ -177,6 +177,10 @@ textarea {
   visibility: visible;
 }
 
+.modal-state:checked + .modal .modal-content-container {
+  top: 0;
+}
+
 .modal {
   z-index: 2;
   position: fixed;
@@ -186,21 +190,27 @@ textarea {
   visibility: hidden;
   height: 100vh;
   width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: var(--black-2);
 }
 
 .modal-content-container {
-  z-index: 3;
+  position: absolute;
+  top: -30rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+  width: 65%;
+  height: 65%;
+  max-width: 500px;
+  max-height: 450px;
+  padding: .5rem;
+  background-color: var(--white-1);
+  border-radius: .75rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30%;
-  height: 65%;
-  padding: .5rem;
-  background-color: var(--white-1);
+  transition: all var(--transition-slow);
 }
 
 .contact {
@@ -305,5 +315,4 @@ textarea {
 .footer-link img {
   max-width: 1.8rem;
   max-height: 1.8rem;
-  background-color: var(--white-1);
 }

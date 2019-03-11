@@ -5,9 +5,9 @@
 const links = document.querySelectorAll('a.to-scroll');
 
 // attach event listener to each link (above) & pass event & href value
-// ASIDE: 'link.hash' = alternative syntax for 'link.getAttribute('href')'
 links.forEach(link => {
   link.addEventListener('click', (event) => {
+    // ASIDE: 'link.hash' = alt. syntax for 'link.getAttribute('href')'
     return smoothScroll(event, link.getAttribute('href'));
   });
 });
@@ -17,11 +17,10 @@ const smoothScroll = (event, targetEl) => {
   event.preventDefault();
   const scrollTarget = document.querySelector(targetEl);
   scrollTarget.scrollIntoView({ behavior: "smooth", block: "start" });
-
 };
 
 
-/* NAV-LINK - APLLY CURRENT SECTION */
+/* NAV-LINK - APPLY 'CURRENT' CLASS WHEN SECTION 100% IN VIEWPORT */
 // apply 'current' class to correct nav-link on page load
 const isInViewPort = (() => {
   const doc = document;
@@ -60,18 +59,34 @@ const isInViewPort = (() => {
 })();
 
 
-// apply 'current' class to correct nav-link on click
-document.querySelector('.nav-links').addEventListener('click', (event) => {
+const eventListenerCtrl = (() => {
   const doc = document;
+
+  // 'nav-link' <div> in nav-bar
+  const navLinkDiv = doc.querySelector('.nav-links');
+  // 'home-cta' section
+  const homeCtaDiv = doc.querySelector('.home-cta');
+  // all nav-links (<a>)
   const navLinks = doc.querySelectorAll('.nav-link');
 
   // remove 'current' class from all nav-links
-  navLinks.forEach((link) => link.classList.remove('current'));
-
-  // if user clicks on an icon, add 'current' class to parent nav-link
-  if (event.target['tagName'] === 'IMG') {
-    return event.target['parentElement'].classList.add('current');
+  const removeCurrentClass = () => {
+    return navLinks.forEach((link) => link.classList.remove('current'));
   }
 
-  return event.target['classList'].add('current');
-});
+  /* EVENT LISTENERS */
+  // apply 'current' to clicked nav-link
+  navLinkDiv.addEventListener('click', (event) => {
+    removeCurrentClass();
+    return event.target['classList'].add('current');
+  });
+
+  // 'current' class to 'about' nav-link when in-text-link clicked @'home'
+  homeCtaDiv.addEventListener('click', (event) => {
+    const targetTagName = event.target['tagName'];
+    if ((targetTagName === 'A') || (targetTagName === 'H2')) {
+      removeCurrentClass();
+      return navLinks[2].classList.add('current');
+    }
+  });
+})();
