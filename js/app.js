@@ -77,8 +77,10 @@ const eventListenerCtrl = (() => {
   /* EVENT LISTENERS */
   // apply 'current' to clicked nav-link
   navLinkDiv.addEventListener('click', (event) => {
-    removeCurrentClass();
-    return event.target['classList'].add('current');
+    if (event.target['tagName'] === 'A') {
+      removeCurrentClass();
+      return event.target['classList'].add('current');
+    }
   });
 
   // 'current' class to 'about' nav-link when in-text-link clicked @'home'

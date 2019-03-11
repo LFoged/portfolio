@@ -3,7 +3,7 @@
   --black-1: rgb(41, 41, 41);
   --black-2: rgba(0, 0, 0, 0.932);
   --white-1: rgb(255, 255, 255);
-  --white-2: rgb(240, 240, 240);
+  --white-2: rgb(233, 233, 233);
   --blue-1: rgb(0, 50, 187);
   --blue-2: rgb(31, 91, 255);
 
@@ -49,9 +49,17 @@ h1 {
   font-weight: 300;
 }
 
+h2,
+h3 {
+  font-weight: 400;
+}
+
 h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
   font-size: 1.2rem;
-  font-weight: 400; 
 }
 
 p {
@@ -125,7 +133,7 @@ textarea {
   line-height: 1.65;
 }
 
-.home-cta h2 {
+.home-cta h3 {
   display: inline-block;
   margin-left: .5rem;
 }
@@ -206,7 +214,7 @@ textarea {
   max-height: 450px;
   padding: .5rem;
   background-color: var(--white-1);
-  border-radius: .75rem;
+  border-radius: .5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -292,24 +300,16 @@ textarea {
 .current:active {
   background: var(--white-2);
   border-style: solid;
+  border-color: var(--white-2);
   box-shadow: none;
   cursor: not-allowed; 
   transform: none;
 }
 
 .icon {
-  vertical-align: middle;
-  max-width: 1.2rem;
-  max-height: 1.2rem;
-}
-
-.card h3 {
-  font-weight: 500;
-}
-
-.tools {
-  font-size: 1.5rem;
-  font-weight: 400;
+  vertical-align: -9%;
+  max-width: 1.3rem;
+  max-height: 1.3rem;
 }
 
 .footer-link img {
