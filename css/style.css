@@ -137,27 +137,35 @@ textarea {
 .cards-container {
   min-width: 30rem;
   max-width: 45rem;
-  display: flex;
-  padding-bottom: 2rem;
 }
 
 .card {
   flex: 1;
-  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 1rem .75rem 1.5rem;
   border: .05rem var(--black-1) solid;
-  margin: 0 .3rem;
-  transition: var(--transition-fast);
+  padding: .5rem .75rem .75rem;
+  margin-bottom: 1rem;
+}
+
+.card-header h3 {
+  font-weight: 700;
+}
+
+.card-footer {
+  padding-top: .4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
 }
 
 .card-links {
+  width: 22%;
   display: flex;
-  justify-content: space-around;
-  padding-top: 1rem;
+  justify-content: space-between;
 }
+
 
 /* Modal */
 .modal-state {
@@ -235,6 +243,7 @@ textarea {
   font-size: 1.1rem;
   font-weight: 600;
   padding: .6rem 1.3rem;
+  border-width: .05rem;
   border-radius: .25rem;
   outline: none;
   transition: var(--transition-fast);
@@ -243,7 +252,8 @@ textarea {
 .nav-link {
   color: var(--black-1);
   background: var(--white-1);
-  border: .05rem var(--black-1) dashed;
+  border-color: var(--black-1); 
+  border-style: dashed;
   margin: 0 .1rem;
 }
 
@@ -279,12 +289,14 @@ textarea {
   font-weight: 500;
   color: var(--white-1);
   background: var(--blue-1);
-  border: none;
+  border-color: var(--blue-1);
+  border-style: solid;
 }
 
 .cta-primary:hover,
 .cta-primary:active {
   background-color: var(--blue-2);
+  border-color: var(--blue-2);
 }
 
 .current,
@@ -294,7 +306,7 @@ textarea {
   border-style: solid;
   border-color: var(--white-2);
   box-shadow: none;
-  cursor: not-allowed; 
+  cursor: not-allowed;
   transform: none;
 }
 
