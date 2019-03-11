@@ -65,23 +65,14 @@
   <!-- project 'page' -->
   <section class="page" id="projects">
     <div class="projects content">
-      <h3 class="tools">Frontend: HTML, CSS, JavaScript</h3>
-      <h1>
-        Fullstack:
-        <span class="tools">Vue, Node (Express / Hapi), MongoDB</span>
-      </h1>
-
-      <br>
-      <br>
-      <br>
-
+      <h1 class="heading-primary">Some examples of things I've built</h1>
 
       <div class="cards-container">
         <div class="card">
-          <h3 class="heading-secondary"><strong>FRONTEND</strong></h3>
-
-          <h3 class="heading-secondary">Random Quotes</h3>
-          <p>Get random quotes from different APIs</p>
+          <h3 class="heading-secondary"><strong>Random Quotes</strong></h3>
+          <p class="heading-secondary">Get random quotes from different APIs</p>
+          <p><strong><u>Tools</u>:</strong></p>
+          <p>HTML, CSS, JavaScript</p>
           <div class="card-links">
             <p>
               <a class="in-text-link" href="https://lfoged.github.io/random-ramblings/" target="_blank"
@@ -95,8 +86,12 @@
         </div>
 
         <div class="card">
-          <h3 class="heading-secondary">Wiki Search</h3>
-          <p>Search Wikipedia for articles on any topic</p>
+          <h3 class="heading-secondary"><strong>Wiki Search</strong></h3>
+          <p class="heading-secondary">
+            Search Wikipedia for articles on any topic
+          </p>
+          <p><strong><u>Tools</u>:</strong></p>
+          <p>HTML, CSS, JavaScript</p>
           <div class="card-links">
             <p>
               <a class="in-text-link" href="https://lfoged.github.io/wiki-wanna-know/" target="_blank"
@@ -110,8 +105,10 @@
         </div>
 
         <div class="card">
-          <h3 class="heading-secondary">Local Weather</h3>
-          <p>Get 4-day local weather forecasts</p>
+          <h3 class="heading-secondary"><strong>API Boilerplate</strong></h3>
+          <p class="heading-secondary">Boilerplate code for Node REST API, with authentication and validation</p>
+          <p><strong><u>Tools</u>:</strong></p>
+          <p>Node, Express, MongoDB</p>
           <div class="card-links">
             <p>
               <a class="in-text-link" href="https://lfoged.github.io/where-the-weather/" target="_blank"
@@ -123,7 +120,13 @@
             </p>
           </div>
         </div>
+
       </div>
+      <h3>
+        <a class="in-text-link" href="https://github.com/LFoged" target="_blank" rel="noopener noreferrer">
+          Visit GitHub</a>
+        for more examples
+      </h3>
     </div>
   </section>
 
@@ -147,14 +150,14 @@
 
       <br>
 
-      <a class="btn cta-primary to-scroll" href="#contact">Get in touch</a>
+      <label class="btn cta-primary" for="modal-state">Let's have a chat</label>
     </div>
   </header>
 
   <!-- modal & contact form - checkbox 'hack' to manage modal state -->
   <input type="checkbox" class="modal-state" id="modal-state">
   <div class="modal" id="modal">
-    <label class="modal__bg" for="modal-state"></label>
+    <label class="modal-bg" for="modal-state"></label>
     <div class="modal-content-container">
       <div class="contact content">
         <h1 class="heading-secondary">Send a message</h1>
