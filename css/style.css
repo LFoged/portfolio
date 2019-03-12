@@ -148,6 +148,10 @@ textarea {
   margin-bottom: 1rem;
 }
 
+.card:last-child {
+  margin-bottom: 1.75rem;
+}
+
 .card-header h3 {
   font-weight: 700;
 }
@@ -161,7 +165,8 @@ textarea {
 }
 
 .card-links {
-  width: 22%;
+  min-width: 7.5rem;
+  max-width: 22%;
   display: flex;
   justify-content: space-between;
 }
@@ -319,4 +324,5 @@ textarea {
 .footer-link img {
   max-width: 1.8rem;
   max-height: 1.8rem;
+  background-color: var(--white-1);
 }
