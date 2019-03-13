@@ -26,44 +26,57 @@ const isInViewPort = (() => {
   const doc = document;
 
   const navLinks = doc.querySelectorAll('.nav-link');
-
   // sections
   const homeSection = doc.querySelector('#home');
   const projectsSection = doc.querySelector('#projects');
   const aboutSection = doc.querySelector('#about');
-
   // home section top & bottom
   const homeRect = homeSection.getBoundingClientRect();
   const homeTop = homeRect.top;
   const homeBtm = homeRect.bottom;
-
   // projects section top & bottom
   const projectsRect = projectsSection.getBoundingClientRect();
   const projectsTop = projectsRect.top;
   const projectsBtm = projectsRect.bottom;
-
   // about section top & bottom
   const aboutRect = aboutSection.getBoundingClientRect();
   const aboutTop = aboutRect.top;
   const aboutBtm = aboutRect.bottom;
 
-  return (
-    (homeTop >= 0) && (homeBtm <= window.innerHeight)
-      ? navLinks[0].classList.add('current')
-      : (projectsTop >= 0) && (projectsBtm <= window.innerHeight)
-        ? navLinks[1].classList.add('current')
-        : (aboutTop >= 0) && (aboutBtm <= window.innerHeight)
-          ? navLinks[2].classList.add('current')
-          : false
-  );
+  // height of viewport (window.innerHeight)
+  const innerHeight = window.innerHeight;
+
+  // apply 'current' class to a nav-link
+  const applyCurrentClass = (navLinkIndex) => {
+    return navLinks[navLinkIndex].classList.add('current');
+  };
+
+  // call 'applyCurrentClass' on corresponding nav-link if el fully visible 
+  const applyCurrentClassIfFullyVisible = (elArrays) => {
+    elArrays.forEach((elArray, index) => {
+      const [elTop, elBtm] = elArray;
+      return ((elTop >= 0) && (elBtm <= innerHeight))
+        ? applyCurrentClass(index)
+        : false;
+    });
+  };
+
+  return applyCurrentClassIfFullyVisible([
+    [homeTop, homeBtm],
+    [projectsTop, projectsBtm],
+    [aboutTop, aboutBtm]
+  ]);
 })();
 
 
+// event listeners to apply 'current' class to nav-links when relevant
 const eventListenerCtrl = (() => {
   const doc = document;
 
   // 'nav-link' <div> in nav-bar
   const navLinkDiv = doc.querySelector('.nav-links');
+  // in-text-link to 'projects'
+  const projectsLink = doc.querySelector('.to-projects');
   // 'home-cta' section
   const homeCtaDiv = doc.querySelector('.home-cta');
   // all nav-links (<a>)
@@ -75,7 +88,7 @@ const eventListenerCtrl = (() => {
   }
 
   /* EVENT LISTENERS */
-  // apply 'current' to clicked nav-link
+  // apply 'current' class to clicked nav-link
   navLinkDiv.addEventListener('click', (event) => {
     if (event.target['tagName'] === 'A') {
       removeCurrentClass();
@@ -83,10 +96,16 @@ const eventListenerCtrl = (() => {
     }
   });
 
+  // 'current' class to 'projects' nav-link when in-text-link clicked @'home'
+  projectsLink.addEventListener('click', (event) => {
+    removeCurrentClass();
+    return navLinks[1].classList.add('current');
+  });
+
   // 'current' class to 'about' nav-link when in-text-link clicked @'home'
   homeCtaDiv.addEventListener('click', (event) => {
     const targetTagName = event.target['tagName'];
-    if ((targetTagName === 'A') || (targetTagName === 'H2')) {
+    if ((targetTagName === 'A')) {
       removeCurrentClass();
       return navLinks[2].classList.add('current');
     }
