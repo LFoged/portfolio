@@ -63,7 +63,7 @@ h3 {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.05rem;
 }
 
 input,
@@ -124,11 +124,6 @@ textarea {
   text-align: left;
 }
 
-.home-intro {
-  padding-bottom: 2.5rem;
-  line-height: 1.65;
-}
-
 .home-cta h3 {
   display: inline-block;
   margin-left: .5rem;
@@ -171,6 +166,9 @@ textarea {
   justify-content: space-between;
 }
 
+.content {
+  max-width: 650px;
+}
 
 /* Modal */
 .modal-state {
@@ -232,12 +230,20 @@ textarea {
 
 
 /* Element classes */
-.heading-primary {
+.pd-btm-xl {
+  padding-bottom: 2.5rem;
+}
+
+.pd-btm-l {
   padding-bottom: 1.5rem;
 }
 
-.heading-secondary {
+.pd-btm-m {
   padding-bottom: .5rem;
+}
+
+.lh-l {
+  line-height: 1.65;
 }
 
 
@@ -319,6 +325,10 @@ textarea {
   vertical-align: -9%;
   max-width: 1.3rem;
   max-height: 1.3rem;
+}
+
+.inline {
+  vertical-align: middle;
 }
 
 .footer-link img {
