@@ -120,10 +120,6 @@ textarea {
   padding: 0 1.5rem;
 }
 
-.home {
-  text-align: left;
-}
-
 .home-cta h3 {
   display: inline-block;
   margin-left: .5rem;
@@ -140,15 +136,11 @@ textarea {
   flex-direction: column;
   border: .05rem var(--black-1) solid;
   padding: .5rem .75rem .75rem;
-  margin-bottom: 1rem;
-}
-
-.card:last-child {
-  margin-bottom: 1.75rem;
+  margin-bottom: .5rem;
 }
 
 .card-header h3 {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .card-footer {
@@ -156,7 +148,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .card-links {
