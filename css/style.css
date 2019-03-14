@@ -224,6 +224,20 @@ textarea {
   transition: all var(--transition-slow);
 }
 
+.modal-close-icon {
+  position: absolute;
+  top: .7rem;
+  right: .7rem;
+  max-width: 2.8rem;
+  max-height: 2.8;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.modal-close-icon:hover {
+  transform: scale(1.12);
+}
+
 .contact {
   width: 90%;
 }

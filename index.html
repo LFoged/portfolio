@@ -169,7 +169,7 @@
           I use <strong>Node</strong> and <strong>MongoDB</strong> to build APIs.
         </p>
         <p>
-          On the frontend, it's usually plain <strong>HTML & CSS</strong> or <strong>Vue</strong>.
+          On the frontend, it's usually plain <strong>HTML</strong> & <strong>CSS</strong> or <strong>Vue</strong>.
         </p>
       </div>
       <p>
@@ -182,11 +182,14 @@
     </div>
   </section>
 
-  <!-- modal & contact form - checkbox 'hack' to manage modal state -->
+  <!-- modal & contact form - checkbox 'hack' to manage modal visibility -->
   <input type="checkbox" class="modal-state" id="modal-state">
   <div class="modal" id="modal">
     <label class="modal-bg" for="modal-state"></label>
     <div class="modal-content-container">
+      <label for="modal-state">
+        <img class="modal-close-icon" src="./img/close.png" alt="Close icon">
+      </label>
       <div class="contact content">
         <h1 class="pd-btm-m">Send a message</h1>
         <p class="pd-btm-l">Or email
