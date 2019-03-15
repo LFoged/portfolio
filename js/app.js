@@ -77,37 +77,37 @@ const eventListenerCtrl = (() => {
   const navLinkDiv = doc.querySelector('.nav-links');
   // in-text-link to 'projects'
   const projectsLink = doc.querySelector('.to-projects');
-  // 'home-cta' h3 - contains a modal 'btn' & a link
-  const homeCta = doc.querySelector('.home-cta');
+  // int-text-link to 'about'
+  const aboutLink = doc.querySelector('.to-about');
   // all nav-links (<a>)
   const navLinks = doc.querySelectorAll('.nav-link');
 
   // remove 'current' class from all nav-links
-  const removeCurrentClass = () => {
+  const removeCurrentClassFromAllNavLinks = () => {
     return navLinks.forEach((link) => link.classList.remove('current'));
   }
+
+  const setCurrentClassOnNavLink = (navLinkIndex = 0) => {
+    removeCurrentClassFromAllNavLinks();
+    return navLinks[navLinkIndex].classList.add('current');
+  };
 
   /* EVENT LISTENERS */
   // apply 'current' class to clicked nav-link
   navLinkDiv.addEventListener('click', (event) => {
     if (event.target['tagName'] === 'A') {
-      removeCurrentClass();
+      removeCurrentClassFromAllNavLinks();
       return event.target['classList'].add('current');
     }
   });
 
   // 'current' class to 'projects' nav-link when in-text-link clicked @'home'
   projectsLink.addEventListener('click', (event) => {
-    removeCurrentClass();
-    return navLinks[1].classList.add('current');
+    return setCurrentClassOnNavLink(1);
   });
 
   // 'current' class to 'about' nav-link when in-text-link clicked @'home'
-  homeCta.addEventListener('click', (event) => {
-    const targetTagName = event.target['tagName'];
-    if ((targetTagName === 'A')) {
-      removeCurrentClass();
-      return navLinks[2].classList.add('current');
-    }
+  aboutLink.addEventListener('click', (event) => {
+    return setCurrentClassOnNavLink(2);
   });
 })();

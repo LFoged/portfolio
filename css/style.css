@@ -1,3 +1,20 @@
+/* 
+Structure / Index:
+
+1: Variables - values used throughout stylesheet
+2: Reset - setting browser common baseline
+3: Elements - styling for HTML elements
+4: Utility Classes - used to add padding, line-height, etc.
+5: Nav-bar & Footer
+6: Sections - common styling shared between 'page' sections
+7: Projects section - styling for 'project showcase cards'
+8: Modal - styling for modal used for 'contact'
+9: Buttons & Links
+10: Icons & Images
+
+*/
+
+
 /* Variables */
 :root {
   --black-1: rgb(41, 41, 41);
@@ -8,7 +25,7 @@
   --yellow-1: rgba(255, 255, 0, 0.473);
 
   --overlay-1: rgba(0, 0, 0, 0.932);
-  --overlay-2: rgba(255, 255, 255, 0.938);
+  --overlay-2: rgba(255, 255, 255, 0.932);
 
   --transition-fast: .1s ease-in-out;
   --transition-slow: .3s ease;
@@ -39,6 +56,7 @@ body {
   letter-spacing: .09rem;
   overflow: hidden; /* no scroll bar (effect: 1 section = 1 'page') */
 }
+
 
 /* Elements */
 a,
@@ -90,6 +108,24 @@ textarea {
 }
 
 
+/* Utility classes */
+.pd-btm-xl {
+  padding-bottom: 2.5rem;
+}
+
+.pd-btm-l {
+  padding-bottom: 1.5rem;
+}
+
+.pd-btm-m {
+  padding-bottom: .5rem;
+}
+
+.lh-l {
+  line-height: 1.65;
+}
+
+
 /* Nav-bar & Footer */
 .nav-bar,
 .footer {
@@ -114,7 +150,7 @@ textarea {
 }
 
 
-/* Sections - all */
+/* Sections - common styling */
 .page {
   height: 100vh;
   width: 100vw;
@@ -130,7 +166,7 @@ textarea {
 }
 
 
-/* Projects section */
+/* Projects section - cards */
 .card {
   position: relative;
   flex: 1;
@@ -138,7 +174,7 @@ textarea {
   flex-direction: column;
   padding: 1rem .75rem .75rem;
   border: .05rem var(--black-1) dashed;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   transition: all var(--transition-fast);
 }
 
@@ -156,7 +192,7 @@ textarea {
   background-color: var(--yellow-1);
 }
 
-.card h3 {
+.card > h3 {
   font-weight: 600;
 }
 
@@ -165,9 +201,8 @@ textarea {
   visibility: hidden;
   top: 0;
   left: 0;
-  height: 99%; /* 100% covers part of every 2nd card's border*/
+  height: 99.5%; /* 100% covers part of every 2nd card's btm border*/
   width: 100%;
-  color: var(--white-1);
   background-color: var(--overlay-2);
   display: flex;
   justify-content: center;
@@ -180,7 +215,7 @@ textarea {
 }
 
 
-/* Modal - Contact section */
+/* Modal & Contact section */
 .modal-state {
   display: none;
 }
@@ -253,24 +288,6 @@ textarea {
 }
 
 
-/* Element classes */
-.pd-btm-xl {
-  padding-bottom: 2.5rem;
-}
-
-.pd-btm-l {
-  padding-bottom: 1.5rem;
-}
-
-.pd-btm-m {
-  padding-bottom: .5rem;
-}
-
-.lh-l {
-  line-height: 1.65;
-}
-
-
 /* Buttons & links */
 .btn {
   display: inline-block;
@@ -308,8 +325,15 @@ textarea {
   transform: translateY(-.05rem);
 }
 
-.footer-link {
-  margin: 0 .5rem;
+.current,
+.current:hover,
+.current:active {
+  background: var(--white-2);
+  border-style: solid;
+  border-color: var(--white-2);
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .in-text-link {
@@ -340,38 +364,29 @@ textarea {
 
 .cta-secondary {
   color: var(--black-1);
-  font-size: 1rem;
-  background: transparent;
+  font-size: 1.05rem;
+  background: var(--white-1);
   border-color: inherit;
-  border-style: solid;
-  margin: 0 .2rem;
+  border-style: dashed;
 }
 
 .cta-secondary:hover {
   color: var(--white-1);
   background: var(--black-1);
   border-color: var(--black-1);
-}
-
-.current,
-.current:hover,
-.current:active {
-  background: var(--white-2);
   border-style: solid;
-  border-color: var(--white-2);
-  box-shadow: none;
-  cursor: not-allowed;
-  transform: none;
 }
 
+.footer-link {
+  margin: 0 .5rem;
+}
+
+
+/* Icons & Images */
 .icon {
   vertical-align: -9%;
   max-width: 1.3rem;
   max-height: 1.3rem;
-}
-
-.inline {
-  vertical-align: middle;
 }
 
 .footer-link img {

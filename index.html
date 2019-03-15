@@ -24,7 +24,7 @@
       <a class="btn nav-link to-scroll" href="#about">About</a>
     </div>
 
-    <!-- label & checkbox modal "hack" - user not redirected to '#' on close -->
+    <!-- label & checkbox for modal visibility - no redirect ('#') on close -->
     <label class="btn cta-primary" for="modal-state">Contact</label>
   </nav>
 
@@ -55,9 +55,10 @@
           </a>
         </h3>
       </div>
-      <h3 class="home-cta">
+      <h3>
         <label class="btn cta-primary" for="modal-state">Get in touch</label>
-        or <a class="in-text-link to-scroll" href="#about">read about me</a>
+        or
+        <a class="in-text-link to-scroll to-about" href="#about">read about me</a>
       </h3>
     </div>
   </header>
@@ -65,32 +66,35 @@
   <!-- project 'page' -->
   <section class="page" id="projects">
     <div class="projects content">
-      <div class="cards-container pd-btm-l">
-
+      <div class="cards-container pd-btm-m">
         <div class="card">
-          <h3>Random Quotes</h3>
-          <p>See & save random quotes from different APIs</p>
+          <h3>Random Ramblings</h3>
+          <p>See & save (in browser) random quotes from different APIs</p>
           <p class="card-tools">HTML, CSS, JavaScript</p>
           <div class="card-overlay">
-            <a class="btn cta-secondary" href="https://lfoged.github.io/random-ramblings/" target="_blank"
-              rel="noopener noreferrer">DEMO</a>
-            <a class="btn cta-secondary" href="https://github.com/LFoged/random-ramblings" target="_blank"
-              rel="noopener noreferrer">CODE</a>
+            <h3>
+              <a class="btn cta-secondary" href="https://lfoged.github.io/random-ramblings/" target="_blank"
+                rel="noopener noreferrer">See demo</a>
+              or
+              <a class="btn cta-secondary" href="https://github.com/LFoged/random-ramblings" target="_blank"
+                rel="noopener noreferrer">See code</a>
+            </h3>
           </div>
         </div>
-
         <div class="card">
-          <h3>Wiki Search</h3>
+          <h3>Wiki Wanna Know</h3>
           <p>Search Wikipedia for articles on any topic</p>
           <p class="card-tools">HTML, CSS, JavaScript</p>
           <div class="card-overlay">
-            <a class="btn cta-secondary" href="https://lfoged.github.io/wiki-wanna-know" target="_blank"
-              rel="noopener noreferrer">DEMO</a>
-            <a class="btn cta-secondary" href="https://github.com/LFoged/wiki-wanna-know" target="_blank"
-              rel="noopener noreferrer">CODE</a>
+            <h3>
+              <a class="btn cta-secondary" href="https://lfoged.github.io/wiki-wanna-know" target="_blank"
+                rel="noopener noreferrer">See demo</a>
+              or
+              <a class="btn cta-secondary" href="https://github.com/LFoged/wiki-wanna-know" target="_blank"
+                rel="noopener noreferrer">See code</a>
+            </h3>
           </div>
         </div>
-
         <div class="card">
           <h3>REST API Boilerplate</h3>
           <p>
@@ -99,9 +103,7 @@
           <p class="card-tools">Node, Express, MongoDB</p>
           <div class="card-overlay">
             <a class="btn cta-secondary" href="https://github.com/LFoged/todo_with_you-API" target="_blank"
-              rel="noopener noreferrer">DEMO</a>
-            <a class="btn cta-secondary" href="https://github.com/LFoged/random-ramblings" target="_blank"
-              rel="noopener noreferrer">CODE</a>
+              rel="noopener noreferrer">See code</a>
           </div>
         </div>
       </div>
@@ -155,7 +157,7 @@
     </div>
   </section>
 
-  <!-- modal & contact form - checkbox 'hack' to manage modal visibility -->
+  <!-- contact - modal & contact form - checkbox to manage modal visibility -->
   <input type="checkbox" class="modal-state" id="modal-state">
   <div class="modal" id="modal">
     <label class="modal-bg" for="modal-state"></label>
