@@ -1,11 +1,14 @@
 /* Variables */
 :root {
   --black-1: rgb(41, 41, 41);
-  --black-2: rgba(0, 0, 0, 0.932);
   --white-1: rgb(255, 255, 255);
   --white-2: rgb(233, 233, 233);
   --blue-1: rgb(0, 50, 187);
   --blue-2: rgb(31, 91, 255);
+  --yellow-1: rgba(255, 255, 0, 0.473);
+
+  --overlay-1: rgba(0, 0, 0, 0.932);
+  --overlay-2: rgba(0, 0, 0, 0.863);
 
   --transition-fast: .1s ease-in-out;
   --transition-slow: .3s ease;
@@ -87,7 +90,7 @@ textarea {
 }
 
 
-/* Section classes */
+/* Nav-bar & Footer */
 .nav-bar,
 .footer {
   z-index: 1;
@@ -110,6 +113,8 @@ textarea {
   bottom: 3%;
 }
 
+
+/* Sections - all */
 .page {
   height: 100vh;
   width: 100vw;
@@ -120,43 +125,62 @@ textarea {
   padding: 0 1rem;
 }
 
-.cards-container {
-  min-width: 30rem;
-}
-
-.card {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  border: .05rem var(--black-1) solid;
-  padding: .5rem .75rem .75rem;
-  margin-bottom: .5rem;
-}
-
-.card-header h3 {
-  font-weight: 600;
-}
-
-.card-footer {
-  padding-top: .4rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 500;
-}
-
-.card-links {
-  min-width: 7.5rem;
-  max-width: 22%;
-  display: flex;
-  justify-content: space-between;
-}
-
 .content {
   max-width: 620px;
 }
 
-/* Modal */
+
+/* Projects section */
+.card {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem .75rem .75rem;
+  border: .05rem var(--black-1) dashed;
+  margin-bottom: 1rem;
+  transition: all var(--transition-fast);
+}
+
+.card:hover {
+  border-style: solid;
+}
+
+.card-tools {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: .8rem;
+  font-weight: 600;
+  padding: .1rem .3rem;
+  background-color: var(--yellow-1);
+}
+
+.card h3 {
+  font-weight: 600;
+}
+
+.card-overlay {
+  position: absolute;
+  visibility: hidden;
+  top: 0%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: var(--white-1);
+  background-color: var(--overlay-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: visibility var(--slow);
+}
+
+.card:hover .card-overlay {
+  visibility: visible;
+}
+
+
+/* Modal - Contact section */
 .modal-state {
   display: none;
 }
@@ -187,7 +211,7 @@ textarea {
   visibility: hidden;
   height: 100vh;
   width: 100vw;
-  background-color: var(--black-2);
+  background-color: var(--overlay-1);
 }
 
 .modal-content-container {
@@ -257,6 +281,10 @@ textarea {
   border-width: .05rem;
   border-radius: .25rem;
   outline: none;
+}
+
+.nav-link,
+.cta-primary {
   transition: var(--transition-fast);
 }
 
@@ -297,8 +325,8 @@ textarea {
 }
 
 .cta-primary {
-  font-weight: 500;
   color: var(--white-1);
+  font-weight: 500;
   background: var(--blue-1);
   border-color: var(--blue-1);
   border-style: solid;
@@ -308,6 +336,21 @@ textarea {
 .cta-primary:active {
   background-color: var(--blue-2);
   border-color: var(--blue-2);
+}
+
+.cta-secondary {
+  color: var(--white-1);
+  font-size: 1rem;
+  background: transparent;
+  border-color: inherit;
+  border-style: solid;
+  margin: 0 .2rem;
+}
+
+.cta-secondary:hover {
+  color: var(--black-1);
+  background: var(--white-1);
+  border-color: var(--white-1);
 }
 
 .current,
