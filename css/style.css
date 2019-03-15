@@ -120,16 +120,9 @@ textarea {
   padding: 0 1rem;
 }
 
-.content {
-  max-width: 620px;
-}
-
-
-/* .cards-container {
+.cards-container {
   min-width: 30rem;
-  max-width: 45rem;
-} */
-
+}
 
 .card {
   flex: 1;
@@ -159,6 +152,9 @@ textarea {
   justify-content: space-between;
 }
 
+.content {
+  max-width: 620px;
+}
 
 /* Modal */
 .modal-state {
