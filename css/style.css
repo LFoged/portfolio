@@ -117,18 +117,19 @@ textarea {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
 }
 
-.home-cta h3 {
-  display: inline-block;
-  margin-left: .5rem;
+.content {
+  max-width: 620px;
 }
 
-.cards-container {
+
+/* .cards-container {
   min-width: 30rem;
   max-width: 45rem;
-}
+} */
+
 
 .card {
   flex: 1;
@@ -158,9 +159,6 @@ textarea {
   justify-content: space-between;
 }
 
-.content {
-  max-width: 650px;
-}
 
 /* Modal */
 .modal-state {
@@ -218,10 +216,10 @@ textarea {
 
 .modal-close-icon {
   position: absolute;
-  top: .7rem;
-  right: .7rem;
-  max-width: 2.8rem;
-  max-height: 2.8;
+  top: .5rem;
+  right: .5rem;
+  max-width: 2.6rem;
+  max-height: 2.6rem;
   cursor: pointer;
   transition: var(--transition-fast);
 }

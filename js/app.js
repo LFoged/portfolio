@@ -77,8 +77,8 @@ const eventListenerCtrl = (() => {
   const navLinkDiv = doc.querySelector('.nav-links');
   // in-text-link to 'projects'
   const projectsLink = doc.querySelector('.to-projects');
-  // 'home-cta' section
-  const homeCtaDiv = doc.querySelector('.home-cta');
+  // 'home-cta' h3 - contains a modal 'btn' & a link
+  const homeCta = doc.querySelector('.home-cta');
   // all nav-links (<a>)
   const navLinks = doc.querySelectorAll('.nav-link');
 
@@ -103,7 +103,7 @@ const eventListenerCtrl = (() => {
   });
 
   // 'current' class to 'about' nav-link when in-text-link clicked @'home'
-  homeCtaDiv.addEventListener('click', (event) => {
+  homeCta.addEventListener('click', (event) => {
     const targetTagName = event.target['tagName'];
     if ((targetTagName === 'A')) {
       removeCurrentClass();
