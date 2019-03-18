@@ -175,11 +175,11 @@ textarea {
   padding: 1rem .75rem .75rem;
   border: .05rem var(--black-1) dashed;
   margin-bottom: 1.1rem;
-  transition: all var(--transition-fast);
 }
 
 .card:hover {
   border-style: solid;
+  border-color: var(--white-2);
 }
 
 .card-tools {
@@ -207,7 +207,6 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: visibility var(--slow);
 }
 
 .card:hover .card-overlay {
@@ -273,8 +272,8 @@ textarea {
   position: absolute;
   top: .5rem;
   right: .5rem;
-  max-width: 2.6rem;
-  max-height: 2.6rem;
+  max-width: 2.5rem;
+  max-height: 2.5rem;
   cursor: pointer;
   transition: var(--transition-fast);
 }
