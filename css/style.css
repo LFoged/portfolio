@@ -22,7 +22,7 @@ Structure / Index:
   --white-2: rgb(233, 233, 233);
   --blue-1: rgb(0, 50, 187);
   --blue-2: rgb(31, 91, 255);
-  --yellow-1: rgba(255, 255, 0, 0.473);
+  --yellow-1: rgba(255, 255, 0, 0.37);
 
   --overlay-1: rgba(0, 0, 0, 0.932);
   --overlay-2: rgba(255, 255, 255, 0.932);
@@ -162,7 +162,7 @@ textarea {
 }
 
 .content {
-  max-width: 620px;
+  max-width: 50%;
 }
 
 
@@ -174,7 +174,7 @@ textarea {
   flex-direction: column;
   padding: 1rem .75rem .75rem;
   border: .05rem var(--black-1) dashed;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.1rem;
   transition: all var(--transition-fast);
 }
 
