@@ -17,9 +17,9 @@ Structure / Index:
 
 /* Variables */
 :root {
-  --black-1: rgb(41, 41, 41);
+  --black-1: rgb(44, 44, 44);
   --white-1: rgb(255, 255, 255);
-  --white-2: rgb(233, 233, 233);
+  --white-2: rgb(221, 221, 221);
   --blue-1: rgb(0, 50, 187);
   --blue-2: rgb(31, 91, 255);
   --yellow-1: rgba(255, 255, 0, 0.37);
@@ -207,6 +207,7 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all var(--transition-fast);
 }
 
 .card:hover .card-overlay {
@@ -314,13 +315,13 @@ textarea {
 
 .nav-link:hover {
   border-style: solid;
-  box-shadow: .2rem .3rem .6rem var(--black-1);
+  box-shadow: .2rem .2rem 0 var(--white-2);
   transform: translateY(-.2rem);
 }
 
 .nav-link:active {
   border-style: solid;
-  box-shadow: .1rem .2rem .3rem var(--black-1);
+  box-shadow: .1rem .1rem 0 var(--white-2);
   transform: translateY(-.05rem);
 }
 
@@ -331,7 +332,7 @@ textarea {
   border-style: solid;
   border-color: var(--white-2);
   box-shadow: none;
-  cursor: not-allowed;
+  cursor: initial;
   transform: none;
 }
 
