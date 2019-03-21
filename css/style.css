@@ -17,7 +17,7 @@ Structure / Index:
 
 /* Variables */
 :root {
-  --black-1: rgb(44, 44, 44);
+  --black-1: rgb(48, 48, 48);
   --white-1: rgb(255, 255, 255);
   --white-2: rgb(221, 221, 221);
   --blue-1: rgb(0, 50, 187);
@@ -174,7 +174,11 @@ textarea {
   flex-direction: column;
   padding: 1rem .75rem .75rem;
   border: .05rem var(--black-1) dashed;
-  margin-bottom: 1.1rem;
+  transition: all var(--transition-fast);
+}
+
+.card:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 .card:hover {
@@ -363,7 +367,7 @@ textarea {
 }
 
 .cta-secondary {
-  color: var(--black-1);
+  color: var(--blue-1);
   font-size: 1.05rem;
   background: var(--white-1);
   border-color: inherit;
@@ -371,9 +375,6 @@ textarea {
 }
 
 .cta-secondary:hover {
-  color: var(--white-1);
-  background: var(--black-1);
-  border-color: var(--black-1);
   border-style: solid;
 }
 
