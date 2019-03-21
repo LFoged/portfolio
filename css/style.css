@@ -25,7 +25,6 @@ Structure / Index:
   --yellow-1: rgba(255, 255, 0, 0.37);
 
   --overlay-1: rgba(0, 0, 0, 0.932);
-  --overlay-2: rgba(255, 255, 255, 0.932);
 
   --transition-fast: .1s ease-in-out;
   --transition-slow: .3s ease;
@@ -206,7 +205,7 @@ textarea {
   left: 0;
   height: 99.5%; /* 100% covers part of every 2nd card's btm border*/
   width: 100%;
-  background-color: var(--overlay-2);
+  background-color: var(--white-1);
   display: flex;
   justify-content: center;
   align-items: center;
