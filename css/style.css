@@ -174,7 +174,6 @@ textarea {
   flex-direction: column;
   padding: 1rem .75rem .75rem;
   border: .05rem var(--black-1) dashed;
-  transition: all var(--transition-fast);
 }
 
 .card:not(:last-child) {
@@ -211,7 +210,6 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all var(--transition-fast);
 }
 
 .card:hover .card-overlay {
@@ -344,7 +342,9 @@ textarea {
   font-weight: 600;
   color: var(--blue-1);
   border-bottom: .1rem transparent solid;
-  transition: var(--in-text-link-transition);
+  transition: 
+    padding-bottom var(--in-text-link-transition),
+    border-bottom-color var(--in-text-link-transition);
 }
 
 .in-text-link:hover {
@@ -364,18 +364,6 @@ textarea {
 .cta-primary:active {
   background-color: var(--blue-2);
   border-color: var(--blue-2);
-}
-
-.cta-secondary {
-  color: var(--blue-1);
-  font-size: 1.05rem;
-  background: var(--white-1);
-  border-color: inherit;
-  border-style: dashed;
-}
-
-.cta-secondary:hover {
-  border-style: solid;
 }
 
 .footer-link {
