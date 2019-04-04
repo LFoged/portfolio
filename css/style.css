@@ -53,7 +53,7 @@ body {
   color: var(--black-1);
   line-height: 1.4;
   letter-spacing: .09rem;
-  overflow: hidden; /* no scroll bar (effect: 1 section = 1 'page') */
+  overflow-x: hidden; /* no scroll bar (effect: 1 section = 1 'page') */
 }
 
 
@@ -150,9 +150,16 @@ textarea {
 
 
 /* Sections - common styling */
+.side-scroll-container {
+  display: flex;
+}
+
 .page {
   height: 100vh;
   width: 100vw;
+
+  flex-shrink: 0; /* so .page won't shrink (ref. .side-scroll-container) */
+  
   display: flex;
   flex-direction: column;
   justify-content: center;

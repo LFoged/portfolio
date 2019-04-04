@@ -32,39 +32,42 @@ const isInViewPort = (() => {
   const aboutSection = doc.querySelector('#about');
   // home section top & bottom
   const homeRect = homeSection.getBoundingClientRect();
-  const homeTop = homeRect.top;
-  const homeBtm = homeRect.bottom;
+  const homeLeft = homeRect.left;
+  const homeRight = homeRect.right;
   // projects section top & bottom
   const projectsRect = projectsSection.getBoundingClientRect();
-  const projectsTop = projectsRect.top;
-  const projectsBtm = projectsRect.bottom;
+  const projectsLeft = projectsRect.left;
+  const projectsRight = projectsRect.right;
   // about section top & bottom
   const aboutRect = aboutSection.getBoundingClientRect();
-  const aboutTop = aboutRect.top;
-  const aboutBtm = aboutRect.bottom;
+  const aboutLeft = aboutRect.left;
+  const aboutRight = aboutRect.right;
 
-  // height of viewport (window.innerHeight)
-  const innerHeight = window.innerHeight;
+  // width of viewport (window.innerWidth) <= horizontal scrolling
+  const innerWidth = window.innerWidth;
 
   // apply 'current' class to a nav-link
   const applyCurrentClass = (navLinkIndex) => {
     return navLinks[navLinkIndex].classList.add('current');
   };
 
-  // call 'applyCurrentClass' on corresponding nav-link if el fully visible 
+  // 'applyCurrentClass()' on nav-link if el fully visible (horizontal)
   const applyCurrentClassIfFullyVisible = (elArrays) => {
     elArrays.forEach((elArray, index) => {
-      const [elTop, elBtm] = elArray;
-      return ((elTop >= 0) && (elBtm <= innerHeight))
-        ? applyCurrentClass(index)
-        : false;
+      const [elLeft, elRight] = elArray;
+
+      if (!(elLeft >= 0) || !(elRight <= innerWidth)) {
+        return false;
+      }
+
+      return applyCurrentClass(index);
     });
   };
 
   return applyCurrentClassIfFullyVisible([
-    [homeTop, homeBtm],
-    [projectsTop, projectsBtm],
-    [aboutTop, aboutBtm]
+    [homeLeft, homeRight],
+    [projectsLeft, projectsRight],
+    [aboutLeft, aboutRight]
   ]);
 })();
 
