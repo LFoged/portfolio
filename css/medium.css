@@ -14,6 +14,10 @@
 
 
 /* SECTION */
+.section {
+  scroll-snap-align: none; /* for scroll snap effect set on body */
+}
+
 /* Home */
 .home {
   padding-top: 35vh;
