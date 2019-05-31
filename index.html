@@ -7,195 +7,193 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- stylesheets & favicon -->
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" media="screen and (max-width: 540px)" href="./css/mobile.css">
-  <link rel="stylesheet" media="screen and (min-width: 1100px)" href="./css/widescreen.css">
-  <link rel="shortcut icon" href="./img/smiley.png" type="image/png">
+  <link rel="stylesheet" media="screen and (min-width: 420px)" href="./css/medium.css">
+  <link rel="stylesheet" media="screen and (min-width: 1050px)" href="./css/large.css">
+  <link rel="shortcut icon" href="" type="image/png">
 
-  <title>Louis Foged | Web developer</title>
+  <title>Louis Foged - Business- & Web Developer | Project Manager</title>
 </head>
 
 <body>
 
-  <!-- nav is removed from flow - position: fixed -->
+  <!-- SVG ICON SPRITE -->
+  <svg style="display: none;">
+    <symbol id="light-bulb" viewBox="0 0 32.771 32.771">
+      <path
+        d="M21.59,23.694L21.59,23.694l-10.413-0.003c-0.253,0-0.467-0.189-0.497-0.441c-0.121-1.022-0.478-2.465-1.499-3.526 c-0.001-0.002-0.002-0.003-0.004-0.005c-2.524-2.132-3.971-5.241-3.971-8.54C5.207,5.015,10.222,0,16.385,0 s11.178,5.015,11.178,11.179c0,3.321-1.465,6.449-4.019,8.581c-0.98,1.026-1.337,2.47-1.458,3.493 C22.058,23.505,21.844,23.694,21.59,23.694z M11.611,22.691l9.545,0.003c0.187-1.127,0.64-2.552,1.708-3.664 c2.366-1.979,3.7-4.828,3.7-7.852C26.563,5.566,21.998,1,16.385,1S6.207,5.566,6.207,11.179c0,3.021,1.333,5.869,3.659,7.812 c0.03,0.025,0.057,0.054,0.08,0.085C10.983,20.18,11.426,21.58,11.611,22.691z" />
+      <path
+        d="M21.59,26.718H11.177c-0.276,0-0.5-0.224-0.5-0.5s0.224-0.5,0.5-0.5H21.59c0.276,0,0.5,0.224,0.5,0.5 S21.867,26.718,21.59,26.718z" />
+      <path
+        d="M21.59,29.744H11.177c-0.276,0-0.5-0.224-0.5-0.5s0.224-0.5,0.5-0.5H21.59c0.276,0,0.5,0.224,0.5,0.5 S21.867,29.744,21.59,29.744z" />
+      <path
+        d="M18.564,32.771h-4.36c-0.276,0-0.5-0.224-0.5-0.5s0.224-0.5,0.5-0.5h4.36c0.276,0,0.5,0.224,0.5,0.5 S18.84,32.771,18.564,32.771z" />
+    </symbol>
+    <symbol id="home-icon" viewBox="0 0 33 33">
+      <path
+        d="M27.649,33h-7.216c-0.276,0-0.5-0.224-0.5-0.5V22.32h-6.867V32.5c0,0.276-0.224,0.5-0.5,0.5H5.348 c-0.276,0-0.5-0.224-0.5-0.5V15.893H0.73c-0.205,0-0.389-0.125-0.465-0.315c-0.075-0.19-0.027-0.407,0.121-0.548L16.154,0.137 c0.193-0.183,0.494-0.182,0.688,0l15.772,14.893c0.148,0.141,0.196,0.358,0.121,0.548c-0.076,0.19-0.26,0.315-0.465,0.315h-4.121 V32.5C28.149,32.776,27.925,33,27.649,33z M20.933,32h6.216V15.393c0-0.276,0.224-0.5,0.5-0.5h3.363L16.498,1.188L1.988,14.893h3.36 c0.276,0,0.5,0.224,0.5,0.5V32h6.218V21.82c0-0.276,0.224-0.5,0.5-0.5h7.867c0.276,0,0.5,0.224,0.5,0.5V32z" />
+    </symbol>
+    <symbol id="man" viewBox="0 0 33 33">
+      <path
+        d="M16.5,33C7.402,33,0,25.598,0,16.5S7.402,0,16.5,0S33,7.402,33,16.5S25.598,33,16.5,33z M16.5,1C7.953,1,1,7.953,1,16.5 S7.953,32,16.5,32S32,25.047,32,16.5S25.047,1,16.5,1z" />
+      <path
+        d="M16.5,33c-3.435,0-6.736-1.058-9.549-3.06c-0.15-0.107-0.23-0.29-0.206-0.473s0.148-0.339,0.322-0.403 c4.146-1.535,4.815-2.781,4.815-5.169c0-0.631-0.142-0.838-0.398-1.214c-0.339-0.494-0.803-1.171-1.129-2.939 c-0.048-0.254-0.089-0.274-0.316-0.384c-0.606-0.292-1.163-0.712-1.309-2.628c0-0.928,0.32-1.441,0.585-1.708 c-0.058-0.33-0.153-0.899-0.242-1.519C8.62,10.726,8.6,7.325,12.506,5.744c3.404-1.38,6.121-0.626,6.974,0.273 c0.604,0.019,2.162,0.177,3.246,1.438c1.668,1.94,1.137,6.363,0.955,7.562c0.266,0.261,0.589,0.767,0.589,1.675 c-0.146,1.954-0.703,2.375-1.31,2.666c-0.228,0.11-0.269,0.129-0.316,0.384c-0.326,1.768-0.789,2.445-1.128,2.939 c-0.257,0.375-0.398,0.583-0.398,1.214c0,2.388,0.669,3.634,4.815,5.169c0.174,0.064,0.298,0.219,0.322,0.403 s-0.056,0.366-0.206,0.473C23.236,31.942,19.935,33,16.5,33z M8.317,29.651C10.779,31.191,13.589,32,16.5,32 s5.721-0.809,8.183-2.349c-3.474-1.426-4.565-2.864-4.565-5.755c0-0.941,0.278-1.348,0.573-1.779 c0.304-0.444,0.682-0.996,0.971-2.556c0.139-0.754,0.576-0.964,0.865-1.103c0.311-0.149,0.631-0.303,0.744-1.803 c-0.001-0.764-0.344-0.972-0.358-0.98c-0.184-0.106-0.303-0.329-0.264-0.537c0.248-1.329,0.656-5.474-0.681-7.031 c-0.913-1.062-2.352-1.091-2.626-1.08c-0.046-0.004-0.091-0.005-0.134-0.016c-0.13-0.033-0.35-0.146-0.417-0.262 c-0.272-0.466-2.641-1.403-5.91-0.08c-3.231,1.308-3.238,4.112-2.819,6.682c0.138,0.957,0.289,1.784,0.29,1.788 c0.041,0.225-0.076,0.449-0.283,0.544l0,0c0.003,0-0.339,0.209-0.339,1.008c0.112,1.461,0.433,1.616,0.743,1.765 c0.289,0.139,0.727,0.349,0.866,1.103c0.288,1.56,0.666,2.112,0.97,2.556c0.296,0.431,0.574,0.838,0.574,1.779 C12.883,26.788,11.792,28.226,8.317,29.651z" />
+    </symbol>
+    <symbol id="mail" viewBox="0 0 14 14">
+      <g>
+        <path d="M7,9L5.268,7.484l-4.952,4.245C0.496,11.896,0.739,12,1.007,12h11.986
+			c0.267,0,0.509-0.104,0.688-0.271L8.732,7.484L7,9z" />
+        <path d="M13.684,2.271C13.504,2.103,13.262,2,12.993,2H1.007C0.74,2,0.498,2.104,0.318,2.273L7,8
+			L13.684,2.271z" />
+        <polygon points="0,2.878 0,11.186 4.833,7.079" />
+        <polygon points="9.167,7.079 14,11.186 14,2.875" />
+    </symbol>
+    <symbol id="close-icon" viewBox="0 0 64 64">
+      <path
+        d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59 c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59 c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0 L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z" />
+    </symbol>
+  </svg>
+  <!-- SVG ICONS -->
+
+  <!-- nav position: fixed -->
   <nav class="nav-bar">
-    <div class="nav-links">
-      <a class="btn nav-link to-scroll" href="#home">Home</a>
-      <a class="btn nav-link to-scroll" href="#projects">Projects</a>
-      <a class="btn nav-link to-scroll" href="#about">About</a>
-    </div>
-
-    <!-- label & checkbox for modal visibility - no redirect ('#') on close -->
-    <label class="btn cta-primary" for="modal-state">Contact</label>
-  </nav>
-
-  <!-- container to make 'scrolling' on .page horizontal -->
-  <div class="side-scroll-container">
-
-    <!-- home 'page' -->
-    <header class="page" id="home">
-      <div class="home content">
-        <div class="pd-btm-m">
-          <h1>Hi, I'm Louis</h1>
-          <h1>
-            I'm a <strong>business-</strong> & <strong>web developer</strong>
-          </h1>
-        </div>
-        <div class="pd-btm-xl lh-l">
-          <h3>
-            <img class="icon" src="./img/rocket.png" alt="Rocket">
-            Looking to join an awesome team
-          </h3>
-          <h3>
-            <img class="icon" src="./img/denmark.png" alt="Denmark flag"> Live in Copenhagen
-          </h3>
-          <h3>
-            <img class="icon" src="./img/heart-eyes.png" alt="Heart eyes"> Like people, minimalism & puzzles
-          </h3>
-          <h3>
-            <img class="icon" src="./img/party-popper.png" alt="Party popper"> Enjoy running, cake &
-            <a class="in-text-link to-scroll to-projects" href="#projects">
-              building stuff
-            </a>
-          </h3>
-        </div>
-        <h3>
-          <label class="btn cta-primary" for="modal-state">Get in touch</label>
-          or
-          <a class="in-text-link to-scroll to-about" href="#about">read about me</a>
-        </h3>
+    <div class="nav-bar-container">
+      <!-- navbar navigation links-->
+      <div class="nav-links">
+        <a class="nav-link to-scroll" href="#home">
+          <svg class="icon nav-link-icon">
+            <use xlink:href="#home-icon" />
+          </svg>
+        </a>
+        <a class="nav-link to-scroll" href="#projects">
+          <svg class="icon nav-link-icon">
+            <use xlink:href="#light-bulb" />
+          </svg>
+        </a>
+        <a class="nav-link to-scroll" href="#about">
+          <svg class="icon nav-link-icon">
+            <use xlink:href="#man" />
+          </svg>
+        </a>
       </div>
-    </header>
-
-    <!-- project 'page' -->
-    <section class="page" id="projects">
-      <div class="projects content">
-        <div class="cards-container pd-btm-xl">
-          <div class="card">
-            <h3>Random Ramblings</h3>
-            <p>See & save (in browser) random quotes from different APIs</p>
-            <p class="card-tools">HTML, CSS, JavaScript</p>
-            <div class="card-overlay">
-              <h3>
-                <a class="in-text-link" href="https://lfoged.github.io/random-ramblings/" target="_blank"
-                  rel="noopener noreferrer">See live demo</a>
-                or
-                <a class="in-text-link" href="https://github.com/LFoged/random-ramblings" target="_blank"
-                  rel="noopener noreferrer">see source code</a>
-              </h3>
-            </div>
-          </div>
-          <div class="card">
-            <h3>Wiki Wanna Know</h3>
-            <p>Search Wikipedia for articles on any topic</p>
-            <p class="card-tools">HTML, CSS, JavaScript</p>
-            <div class="card-overlay">
-              <h3>
-                <a class="in-text-link" href="https://lfoged.github.io/wiki-wanna-know" target="_blank"
-                  rel="noopener noreferrer">See live demo</a>
-                or
-                <a class="in-text-link" href="https://github.com/LFoged/wiki-wanna-know" target="_blank"
-                  rel="noopener noreferrer">see source code</a>
-              </h3>
-            </div>
-          </div>
-          <div class="card">
-            <h3>REST API Boilerplate</h3>
-            <p>
-              Starter code for Node REST API, with authentication and validation
-            </p>
-            <p class="card-tools">Node, Express, MongoDB</p>
-            <div class="card-overlay">
-              <h3>
-                <a class="in-text-link" href="https://github.com/LFoged/todo_with_you-API" target="_blank"
-                  rel="noopener noreferrer">See source code</a>
-              </h3>
-            </div>
-          </div>
-        </div>
-        <h3>
-          <label class="btn cta-primary" for="modal-state">Contact me</label>
-          or
-          <a class="in-text-link" href="https://github.com/LFoged" target="_blank" rel="noopener noreferrer">visit
-            GitHub</a>
-          to see more
-        </h3>
-      </div>
-    </section>
-
-    <!-- about 'page' -->
-    <section class="page" id="about">
-      <div class="about content">
-        <div class="pd-btm-l lh-l">
-          <p>
-            <img class="icon" src="./img/uganda.png" alt="Uganda flag">
-            Born and raised in Uganda
-          </p>
-          <p>
-            <img class="icon" src="./img/globe.png" alt="Globe">
-            Have lived in 6 countries
-          </p>
-          <p>
-            <img class="icon" src="./img/student.png" alt="Student">
-            BSc. Sociology & MSc. Management
-          </p>
-        </div>
-        <p>
-          Coming from a business-oriented background, I dove into web development after a few (short-lived) stints as an
-          entrepreneur.
-        </p>
-        <p class="pd-btm-l">
-          <a class="in-text-link" href="./assets/Louis_Foged-CV.pdf" target="_blank" rel="noopener noreferrer">See my
-            CV</a>, if you're interested.
-        </p>
-        <div class="pd-btm-xl">
-          <p class="pd-btm-m">
-            I enjoy working with <strong>JavaScript</strong>.
-          </p>
-          <p>
-            I use <strong>Node</strong> and <strong>MongoDB</strong> to build APIs.
-          </p>
-          <p>
-            On the frontend, it's usually plain <strong>HTML & CSS</strong> or <strong>Vue</strong>.
-          </p>
-        </div>
-        <label class="btn cta-primary" for="modal-state">Let's have a chat</label>
-      </div>
-    </section>
-
-  </div> <!-- closing tag for horizontal scrolling container -->
-
-  <!-- contact - modal & contact form - checkbox to manage modal visibility -->
-  <input type="checkbox" class="modal-state" id="modal-state">
-  <div class="modal" id="modal">
-    <label class="modal-bg" for="modal-state"></label>
-    <div class="modal-content-container">
-      <label for="modal-state">
-        <img class="modal-close-icon" src="./img/close.png" alt="Close symbol">
+      <!-- navbar modal button-->
+      <label class="nav-btn-modal" for="contact-modal-state">
+        <svg class="icon nav-btn-modal-icon">
+          <use xlink:href="#mail" />
+        </svg>
       </label>
-      <div class="contact">
-        <h1 class="pd-btm-l">Send me a message</h1>
-        <form class="contact-form" name="contact" method="POST" netlify>
-          <input type="text" name="name" id="name" placeholder="Your name" minlength="5" maxlength="50" required>
-          <input type="email" name="email" id="email" placeholder="Your email" minlength="7" maxlength="50" required>
-          <textarea name="message" id="message" placeholder="Your Message" minlength="15" maxlength="300"
-            required></textarea>
-          <button class="btn cta-primary" type="submit">Send message</button>
-        </form>
+    </div>
+  </nav>
+  <!-- section: home -->
+  <section class="section home" id="home">
+    <h1 class="pd-btm-l">Hi, I'm Louis</h1>
+    <h2>A <span class="changing-header">Web developer</span></h2>
+    <h2 class="header-2 pd-btm-m">based in Copenhagen.</h2>
+    <h2 class="header-2">
+      I'm looking to join a great team and help create something awesome!
+    </h2>
+  </section>
+
+  <!-- section: projects -->
+  <hr class="section-start">
+  <section class="section projects" id="projects">
+    <h1 class="pd-btm-l">Projects</h1>
+    <div class="cards-container pd-btm-m">
+      <div class="card">
+        <span class="tools">HTML, CSS, JavaScript</span>
+        <h2 class="header-2 pd-btm-xs">What to Wiki</h2>
+        <p class="card-description pd-btm-s">Search for Wikipedia articles</p>
+        <div class="card-links">
+          <p>
+            <a href="https://lfoged.github.io/what-to-wiki/" class="in-text-link" target="_blank"
+              rel="noopener noreferrer">Live demo</a>
+          </p>
+          <p>
+            <a href="https://github.com/LFoged/what-to-wiki" class="in-text-link" target="_blank"
+              rel="noopener noreferrer">Source code</a>
+          </p>
+        </div>
       </div>
+
+      <div class="card">
+        <span class="tools">HTML, CSS, JavaScript</span>
+        <h2 class="header-2 pd-btm-xs">Random ramblings</h2>
+        <p class="card-description pd-btm-s">Find & save random quotes</p>
+        <div class="card-links">
+          <p>
+            <a href="https://lfoged.github.io/random-ramblings/" class="in-text-link" target="_blank"
+              rel="noopener noreferrer">Live demo</a>
+          </p>
+          <p>
+            <a href="https://github.com/LFoged/random-ramblings" class="in-text-link" target="_blank"
+              rel="noopener noreferrer">Source code</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="tools">Node, Express, MongoDB</span>
+        <h2 class="header-2 pd-btm-xs">Node API boilerplate</h2>
+        <p class="card-description pd-btm-s">Project setup for Node apps</p>
+        <div class="card-links">
+          <p>
+            <a href="https://github.com/LFoged/todo_with_you-API" class="in-text-link" target="_blank"
+              rel="noopener noreferrer">Source code</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <h2 class="header-2">
+      <a class="in-text-link" href="https://github.com/LFoged" target="_blank" rel="noopener noreferrer">See Github</a>
+      for more.
+    </h2>
+  </section>
+
+  <!-- section: about -->
+  <hr class="section-start">
+  <section class="section about" id="about">
+    <h1 class="pd-btm-m">About</h1>
+    <p>I like people, laughing and cake.</p>
+    <p class="pd-btm-s">
+      I also like diving, running, business, JavaScript, bla bla bla... aaand cake!
+    </p>
+    <p class="pd-btm-xs">
+      I've lived in 6 countries and been a soldier, teacher, entrepreneur and a few other things, so far.
+    </p>
+    <p class="pd-btm-l">
+      <a class="in-text-link" href="./assets/Louis_Foged-CV.pdf" target="_blank" rel="noopener noreferrer">See my CV</a>
+      if you're interested.
+    </p>
+    <p>
+      Wanna have a chat, coffee... cry?
+    </p>
+    <p class="pd-btm-xl">
+      Don't be shy, drop me a line :)
+    </p>
+    <label class="btn-cta-1" for="contact-modal-state">Get in touch</label>
+  </section>
+
+  <!-- modal & contact form - checkbox to manage modal visibility -->
+  <input type="checkbox" class="contact-modal-state" id="contact-modal-state">
+  <div class="modal" id="modal">
+    <label class="modal-bg" for="contact-modal-state"></label>
+    <div class="modal-content-container">
+      <label class="btn-modal-close" for="contact-modal-state">
+        <svg class="icon modal-close-icon">
+          <use xlink:href="#close-icon" />
+        </svg>
+      </label>
+      <h2 class="pd-btm-s">Let's have a chat</h2>
+      <form class="contact-form" name="contact" method="POST" netlify>
+        <input type="text" name="name" id="name" placeholder="Your name" minlength="5" maxlength="50" required>
+        <input type="email" name="email" id="email" placeholder="Your email" minlength="7" maxlength="50" required>
+        <textarea name="message" id="message" placeholder="Your message" minlength="15" maxlength="300"
+          required></textarea>
+        <button class="btn-cta-1" type="submit">Send message</button>
+      </form>
     </div>
   </div>
 
-  <!-- footer is removed from flow - position: fixed -->
-  <footer class="footer">
-    <a class="footer-link" href="https://uk.linkedin.com/in/louisfoged" target="_blank" rel="noopener noreferrer">
-      <img src="./img/linkedin-icon.png" alt="LinkedIn logo" title="Visit my LinkedIn profile">
-    </a>
-    <a class="footer-link" href="https://github.com/LFoged" target="_blank" rel="noopener noreferrer">
-      <img src="./img/github-icon.png" alt="GitHub logo" title="Visit my GitHub profile">
-    </a>
-  </footer>
-
+  <script src="./js/app.js" async></script>
 </body>
-<script src="./js/app.js" async></script>
 
 </html>

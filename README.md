@@ -2,12 +2,12 @@
 
 ### [See it live](https://www.louisf.dev/)
 ### Description
-My portfolio site 
+My portfolio site
 
 ### Tools
 - HTML
 - CSS
-- JavaScript (vanilla)
+- JavaScript (vanilla - no framework)
 
 ### Author
 Louis Foged

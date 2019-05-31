@@ -1,0 +1,40 @@
+/* NAVBAR (incl. navbar icons) */
+.nav-bar {
+  top: 0;
+  bottom: auto;
+  padding: 1.5rem 0 .5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-bar-container {
+  width: 80%;
+  max-width: 600px;
+}
+
+
+/* SECTION */
+/* Home */
+.home {
+  padding-top: 35vh;
+}
+
+/* Projects */
+.projects,
+.about {
+  padding-top: 15vh;
+}
+
+
+/* MODAL */
+.modal-content-container {
+  position: relative;
+  right: -60rem;
+  width: 84%;
+  max-width: 450px;
+  padding: 3.5rem 1rem 2.5rem;
+  background-color: var(--grey-1);
+  border: var(--modal-border);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-slow);
+}
