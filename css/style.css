@@ -54,7 +54,7 @@ body {
   background-color: var(--grey-1);
 
   /* 'snap' scroll effect - start position set on .section (further down) */
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */
 }
 
 
@@ -183,7 +183,7 @@ textarea {
   margin: 0 auto;
 
   /* scroll snap effect set on body */
-  scroll-snap-align: start; 
+  /* scroll-snap-align: start;  */
 }
 
 .section-start {
