@@ -52,8 +52,9 @@ body {
   line-height: 1.38;
   letter-spacing: .07rem;
   background-color: var(--grey-1);
-  /* 'snap' scroll effect */
-  /* scroll-snap-type: y mandatory; */
+
+  /* 'snap' scroll effect - start position set on .section (further down) */
+  scroll-snap-type: y mandatory;
 }
 
 
@@ -182,7 +183,7 @@ textarea {
   margin: 0 auto;
 
   /* scroll snap effect set on body */
-  /* scroll-snap-align: start;  */
+  scroll-snap-align: start; 
 }
 
 .section-start {
