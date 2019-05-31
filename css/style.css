@@ -19,7 +19,7 @@ CSS file Structure:
   --grey-1: rgb(70, 70, 70);
   --grey-2: rgb(235, 235, 235);
   --grey-3: rgb(173, 173, 173);
-  --grey-4: rgba(53, 53, 53, 0.93);
+  --grey-4: rgba(44, 44, 44, 0.95);
   --orange-1: rgb(218, 97, 28);
 
   --card-border: .05rem solid rgba(173, 173, 173, .3);
@@ -102,6 +102,11 @@ textarea {
   border-bottom-color: var(--grey-3);
   border-bottom-width: .03rem;
   border-bottom-style: solid;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--grey-3);
 }
 
 input {
@@ -273,7 +278,7 @@ textarea {
   position: relative;
   right: -25rem;
   width: 84%;
-  max-width: 450px;
+  max-width: 400px;
   padding: 3.5rem 1rem 2.5rem;
   background-color: var(--grey-1);
   border: var(--modal-border);
@@ -290,8 +295,8 @@ textarea {
   position: absolute;
   top: .75rem;
   right: .75rem;
-  height: 1.2rem;
-  width: 1.2rem;
+  height: 1.25rem;
+  width: 1.25rem;
 }
 
 .modal-close-icon {
