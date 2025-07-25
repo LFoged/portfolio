@@ -32,7 +32,7 @@ const init = (() => {
         if (entry.isIntersecting) {
           // find correct icon via 'id' of section in view 
           const { id } = entry.target;
-          const targetIconIndex = iconIndexBySection[id];
+          const targetIconIndex = iconIndexBySection[ id ];
           navIcons.forEach((icon, index) => {
             if (index === targetIconIndex) {
               return icon.classList.add('current');
@@ -50,7 +50,7 @@ const init = (() => {
   /* CHANGING HEADER (home section) */
   (() => {
     const target = doc.querySelector('.changing-header');
-    const titles = ['Business developer', 'Project manager', 'Web developer'];
+    const titles = [ 'Sales Engineer', 'Technical Project Manager', 'Web Developer' ];
     const numTitles = titles.length;
     let indexCount = 0;
 
@@ -62,7 +62,7 @@ const init = (() => {
       if (!(indexCount < numTitles)) {
         indexCount = 0;
       }
-      displayNewJobTitle(titles[indexCount]);
+      displayNewJobTitle(titles[ indexCount ]);
 
       return indexCount += 1;
     }, 2000);
